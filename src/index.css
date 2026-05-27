@@ -36,6 +36,7 @@
   }
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
 @media (prefers-color-scheme: dark) {
   :root {
     --text: #9ca3af;

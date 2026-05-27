@@ -16,6 +16,16 @@ export default function App()
       alignItems: "center",
       justifyContent: "center",
     }}>
+      <h1 style=
+      {{
+        fontFamily: "'Cinzel', serif",
+        color: "#ffffff",
+        fontSize: 48,
+        letterSpacing: 6,
+      }}>
+        Welcome to My Website
+      </h1>
+      
       <div style={{ position: "relative", width: 660 }}>
 
         {/* Video sits behind the TV image */}
