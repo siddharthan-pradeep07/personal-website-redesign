@@ -13,28 +13,22 @@ export default function App()
       backgroundSize: "cover",
       backgroundPosition: "center",
       display: "flex",
+      flexDirection: "column",
       alignItems: "center",
       justifyContent: "center",
     }}>
-      <h1 style=
+      <div style=
       {{
-        fontFamily: "'Cinzel', serif",
-        color: "#ffffff",
-        fontSize: 48,
-        letterSpacing: 6,
+        position: "relative",
+        width: 660
       }}>
-        Welcome to My Website
-      </h1>
-      
-      <div style={{ position: "relative", width: 660 }}>
-
-        {/* Video sits behind the TV image */}
         <video
           src={myVideo}
           autoPlay
           loop
           muted
-          style={{
+          style=
+          {{
             position: "absolute",
             top: "10%",
             left: "9%",
@@ -44,20 +38,31 @@ export default function App()
             zIndex: 1,
           }}
         />
-
-        {/* TV image on top */}
         <img
           src={tvImage}
           alt="Old CRT TV"
-          style={{
+          style=
+          {{
             position: "relative",
             width: "100%",
             zIndex: 2,
             display: "block",
           }}
         />
-
       </div>
+
+      <h1 style=
+      {{
+        fontFamily: "'Cinzel', serif",
+        color: "#ffffff",
+        fontSize: 48,
+        letterSpacing: 6,
+        marginTop: 24,
+        textAlign: "center",
+      }}>
+        Welcome to My Website
+      </h1>
+
     </div>
   );
 }
