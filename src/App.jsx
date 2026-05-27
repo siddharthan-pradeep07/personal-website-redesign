@@ -1,12 +1,14 @@
+import { useNavigate } from 'react-router-dom'
 import tvImage from "./assets/img/crt_tv.png";
 import bgImage from "./assets/img/bg.png";
 import myVideo from "./assets/videos/rr.mp4";
 
 export default function App() 
 {
+  const navigate = useNavigate();
+
   return (
-    <div style=
-    {{
+    <div style={{
       minHeight: "100vh",
       width: "100vw",
       backgroundImage: `url(${bgImage})`,
@@ -17,18 +19,19 @@ export default function App()
       alignItems: "center",
       justifyContent: "center",
     }}>
-      <div style=
-      {{
-        position: "relative",
-        width: 660
-      }}>
+      <div
+        onClick={() => navigate('/projects')}
+        style={{
+          position: "relative",
+          width: 660,
+          cursor: "pointer",
+        }}>
         <video
           src={myVideo}
           autoPlay
           loop
           muted
-          style=
-          {{
+          style={{
             position: "absolute",
             top: "10%",
             left: "9%",
@@ -41,8 +44,7 @@ export default function App()
         <img
           src={tvImage}
           alt="Old CRT TV"
-          style=
-          {{
+          style={{
             position: "relative",
             width: "100%",
             zIndex: 2,
@@ -51,8 +53,7 @@ export default function App()
         />
       </div>
 
-      <h1 style=
-      {{
+      <h1 style={{
         fontFamily: "'Cinzel', serif",
         color: "#ffffff",
         fontSize: 48,
