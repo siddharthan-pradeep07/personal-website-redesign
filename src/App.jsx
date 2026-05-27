@@ -1,10 +1,13 @@
 import tvImage from "./assets/crt_tv.png";
+import bgImage from "./assets/bg.png";
 
 export default function App() {
   return (
     <div style={{
       minHeight: "100vh",
-      background: "#111",
+      backgroundImage: `url(${bgImage})`,
+      backgroundSize: "cover",
+      backgroundPosition: "center",
       display: "flex",
       alignItems: "center",
       justifyContent: "center",
