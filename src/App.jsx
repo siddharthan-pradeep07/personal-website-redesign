@@ -19,6 +19,18 @@ export default function App()
       alignItems: "center",
       justifyContent: "center",
     }}>
+      <h1 style={{
+        fontFamily: "'Cinzel', serif",
+        color: "#ffffff",
+        fontSize: 48,
+        letterSpacing: 6,
+        marginBottom: 24,
+        textAlign: "center",
+      }}>
+        Welcome to siddharthan.com 
+        {/* domain yet to be purchased */}
+      </h1> 
+
       <div
         onClick={() => navigate('/projects')}
         style={{
@@ -52,17 +64,6 @@ export default function App()
           }}
         />
       </div>
-
-      <h1 style={{
-        fontFamily: "'Cinzel', serif",
-        color: "#ffffff",
-        fontSize: 48,
-        letterSpacing: 6,
-        marginTop: 24,
-        textAlign: "center",
-      }}>
-        Welcome to My Website
-      </h1>
 
     </div>
   );
