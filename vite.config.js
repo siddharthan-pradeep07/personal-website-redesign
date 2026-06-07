@@ -1,8 +1,7 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// https://vite.dev/config/
-export default defineConfig({
-  base: "personal-website-redesign",
+export default defineConfig(({ command }) => ({
+  base: command === 'build' ? '/personal-website-redesign/' : '/',
   plugins: [react()],
-})
+}))
