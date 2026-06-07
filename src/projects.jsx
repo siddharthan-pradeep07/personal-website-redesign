@@ -50,9 +50,9 @@ export default function Projects()
             {projects.map((project, index) => (
                 <div key={index} style=
                     {{
-                        backgroundColor: "rgba(255, 255, 255, 0.15)",
+                        backgroundColor: "rgba(58, 16, 16, 0.08)",
                         backdropFilter: "blur(8px)",
-                        border: "1px solid rgba(255,255,255,0.2)",
+                        border: "3px solid rgba(36, 36, 36, 0.62)",
                         borderRadius: 12,
                         padding: 24,
                         width: "100%",
@@ -79,7 +79,7 @@ export default function Projects()
                             {project.date}
                         </p>
                         <p style={{
-                            color: "rgba(233, 119, 172, 0.36)",
+                            color: "rgba(255, 255, 255, 0.86)",
                             fontSize: 14,
                             letterSpacing: 1,
                         }}>
