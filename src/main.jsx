@@ -7,11 +7,11 @@ import Projects from './projects.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter basename="/personal-website-redesign/">
+    <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/projects" element={<Projects />} />
       </Routes>
     </BrowserRouter>
-  </StrictMode>,
+  </StrictMode>
 )

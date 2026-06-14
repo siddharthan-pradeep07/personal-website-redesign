@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -36,7 +37,6 @@
   }
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
 @media (prefers-color-scheme: dark) {
   :root {
     --text: #9ca3af;

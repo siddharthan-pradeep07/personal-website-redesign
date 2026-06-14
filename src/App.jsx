@@ -27,10 +27,9 @@ export default function App()
         marginBottom: 24,
         textAlign: "center",
       }}>
-        Welcome to siddharthan.com 
-        {/* domain yet to be purchased */}
-      </h1> 
-
+        Welcome! Click the TV to get started!
+        {/* siddharthan.com is now up, yay*/}
+      </h1>
       <div
         onClick={() => navigate('/projects')}
         style={{
