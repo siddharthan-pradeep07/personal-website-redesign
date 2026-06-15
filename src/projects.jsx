@@ -76,7 +76,7 @@ export default function Projects()
             flexDirection: "column",
             alignItems: "center",
             justifyContent: "center",
-            fontFamily: "'Cinzel', serif",
+            fontFamily: "'Ribeye Marrow', serif",
             padding: "60px 40px",
         }}>
             <div style=
@@ -108,7 +108,7 @@ export default function Projects()
                     color: "#fff5db",
                     fontSize: 16,
                     letterSpacing: 2,
-                    fontFamily: "'Cinzel', serif",
+                    fontFamily: "'Ribeye Marrow', serif",
                     marginBottom: 6,
                 }}>
                 </p>
@@ -116,7 +116,7 @@ export default function Projects()
                     color: "#fff5db",
                     fontSize: 18,
                     letterSpacing: 1,
-                    fontFamily: "'Cinzel', serif",
+                    fontFamily: "'Ribeye Marrow', serif",
                     lineHeight: 1.6,
                 }}>
                     Heya! I make cool stuff like robots, websites, rockets, and CAD
@@ -130,9 +130,9 @@ export default function Projects()
                     <a href="https://github.com/siddharthan-pradeep07" target="_blank" rel="noreferrer" style={{ color: "#000000" }}>
                         <FaGithub size={40} />
                     </a>
-                    <a href="https://www.linkedin.com/in/siddharthan-pradeep-0202342a5/" target="_blank" rel="noreferrer" style={{ color: "#000000" }}>
-                        <FaLinkedin size={40} />
-                    </a>
+                    {/* <a href="https://www.linkedin.com/in/siddharthan-pradeep-0202342a5/" target="_blank" rel="noreferrer" style={{ color: "#000000" }}> */}
+                        {/* <FaLinkedin size={40} /> */}
+                    {/* </a> */}
                     <a href="https://youtube.com/@siddharthan.pradeep" target="_blank" rel="noreferrer" style={{ color: "#000000" }}>
                         <FaYoutube size={40} />
                     </a>
@@ -147,7 +147,7 @@ export default function Projects()
                 color: "#ffffff",
                 fontSize: 52,
                 letterSpacing: 6,
-                fontFamily: "'Cinzel', serif",
+                fontFamily: "'Ribeye Marrow', serif",
                 marginBottom: 40,
             }}>
                 Here's my top projects!
@@ -163,8 +163,8 @@ export default function Projects()
                 {projects.map((project, index) => (
                     <div key={index} style=
                     {{
-                        backgroundColor: "rgba(88, 68, 55, 0)",
-                        border: "4px solid rgb(0, 0, 0)",
+                        backgroundColor: "rgba(95, 90, 89, 0.82)",
+                        border: "4px inset rgb(0, 0, 0)",
                         borderRadius: 4,
                         width: "100%",
                         display: "flex",
@@ -197,7 +197,7 @@ export default function Projects()
                                     color: "rgba(255,255,255,0.3)",
                                     fontSize: 12,
                                     letterSpacing: 2,
-                                    fontFamily: "'Cinzel', serif",
+                                    fontFamily: "'Ribeye Marrow', serif",
                                 }}></span>
                             }
                         </div>
@@ -215,7 +215,7 @@ export default function Projects()
                                 fontSize: 16,
                                 letterSpacing: 3,
                                 marginBottom: 8,
-                                fontFamily: "'Cinzel', serif",
+                                fontFamily: "'Ribeye Marrow', serif",
                                 borderBottom: "3px solid rgba(0, 0, 0, 0.15)",
                             }}>
                                 {project.name}
@@ -226,7 +226,7 @@ export default function Projects()
                                 fontSize: 11,
                                 letterSpacing: 3,
                                 marginBottom: 10,
-                                fontFamily: "'Cinzel', serif",
+                                fontFamily: "'horizon', serif",
                                 borderBottom: "3px solid rgba(0, 0, 0, 0.15)",
                             }}>
                                 {project.date}
@@ -237,7 +237,7 @@ export default function Projects()
                                 fontSize: 12,
                                 letterSpacing: 1,
                                 lineHeight: 1.6,
-                                fontFamily: "'Cinzel', serif",
+                                fontFamily: "'horizon', serif",
                                 flexGrow: 1,
                                 marginBottom: 16,
                                 borderBottom: "3px solid rgba(0, 0, 0, 0.15)",
@@ -250,31 +250,31 @@ export default function Projects()
                                 display: "flex",
                                 gap: 10,
                             }}>
-                                <a href={project.liveLink} target="_blank" rel="noreferrer" style=
+                                <a href={project.liveLink} target="_blank" rel="noreferrer" className="press-btn" style=
                                 {{
                                     flex: 1,
                                     padding: "8px 0",
                                     textAlign: "center",
                                     backgroundColor: "#00000000",
-                                    border: "4px solid rgba(31, 30, 29, 0.79)",
+                                    border: "4px inset rgba(31, 30, 29, 0.79)",
                                     color: "#ffffff",
-                                    fontSize: 11,
+                                    fontSize: 16,
                                     letterSpacing: 2,
-                                    fontFamily: "'Cinzel', serif",
+                                    fontFamily: "'horizon', serif",
                                     textDecoration: "none",
                                     transition: "background 0.2s",
                                 }}>
-                                    Demo
+                                    DEMO
                                 </a>
-                                <a href={project.codeLink} target="_blank" rel="noreferrer" style=
+                                <a href={project.codeLink} target="_blank" rel="noreferrer" className="press-btn" style=
                                 {{
                                     flex: 1,
                                     padding: "8px 0",
                                     textAlign: "center",
                                     backgroundColor: "#d69696",
-                                    border: "4px solid rgb(163, 101, 101)",
+                                    border: "4px inset rgb(163, 101, 101)",
                                     color: "#ffffff",
-                                    fontSize: 11,
+                                    fontSize: 16,
                                     letterSpacing: 2,
                                     fontFamily: "'horizon', serif",
                                     textDecoration: "none",

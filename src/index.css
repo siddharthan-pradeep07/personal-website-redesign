@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ribeye+Marrow&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -64,13 +66,6 @@ body {
 #root {
   width: 100%;
   min-height: 100vh;
-  /* margin: 0 auto;
-  text-align: center;
-  border-inline: 1px solid var(--border);
-  min-height: 100svh;
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box; */
 }
 
 h1,
@@ -115,4 +110,35 @@ code {
   line-height: 135%;
   padding: 4px 8px;
   background: var(--code-bg);
+}
+
+* {
+  cursor: none;
+}
+
+.cursor
+{
+  position: fixed;
+  top: 0;
+  left: 0;
+  rotate: 10;
+  width: 22px;
+  height: 22px;
+  background: #d49a9a60;
+  border-radius: 10%;
+  border: 1.5px dashed #000000;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+.press-btn {
+    transition: transform 0.1s, box-shadow 0.1s;
+}
+
+.press-btn:hover {
+    transform: scale(0.95);
+}
+
+.press-btn:active {
+    transform: scale(0.9);
 }
