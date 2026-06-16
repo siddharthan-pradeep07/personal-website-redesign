@@ -142,6 +142,77 @@ export default function Projects()
                 </div>
                 </div>  
             </div>
+            <div style=
+            {{
+                border: "3px solid #fff5db",
+                borderRadius: "5px",
+                padding: "16px 24px",
+                maxWidth: 960,
+                width: "100%",
+                marginTop: 24,
+                marginBottom: 24,
+                backgroundColor: "transparent",
+            }}>
+                <p style=
+                {{
+                    color: "#fff5db",
+                    fontSize: 19,
+                    letterSpacing: 2,
+                    fontFamily: "'Ribeye Marrow', serif",
+                    marginBottom: 14,
+                }}>
+                    My commit history
+                </p>
+                <img
+                    src="https://ghchart.rshah.org/siddharthan-pradeep07"
+                    alt="GitHub contributions"
+                    style=
+                    {{
+                        width: "100%",
+                        borderRadius: 4,
+                        filter: "invert(1)",
+                        display: "block",
+                    }}
+                />
+                <div style=
+                {{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: 8,
+                    marginTop: 12,
+                    justifyContent: "flex-end",
+                }}>
+                    <p style=
+                    {{
+                        color: "rgb(255, 255, 255)",
+                        fontSize: 11,
+                        fontFamily: "'Ribeye Marrow', serif",
+                        letterSpacing: 1,
+                    }}>
+                        Less
+                    </p>
+                    {["#000000", "#56427e", "#7e5788", "#dea3e4"].map((color, i) => (
+                        <div key={i} style=
+                        {{
+                            width: 12,
+                            height: 12,
+                            borderRadius: 2,
+                            backgroundColor: color,
+                            border: "1px solid rgba(255,255,255,0.2)",
+                        }} 
+                        />
+                    ))}
+                    <p style=
+                    {{
+                        color: "rgb(255, 255, 255)",
+                        fontSize: 11,
+                        fontFamily: "'Ribeye Marrow', serif",
+                        letterSpacing: 1,
+                    }}>
+                        More
+                    </p>
+                </div>
+            </div>
             <h1 style=
             {{
                 color: "#ffffff",
@@ -163,7 +234,7 @@ export default function Projects()
                 {projects.map((project, index) => (
                     <div key={index} style=
                     {{
-                        backgroundColor: "rgba(95, 90, 89, 0.82)",
+                        backgroundColor: "rgba(0, 0, 0, 0.82)",
                         border: "4px inset rgb(0, 0, 0)",
                         borderRadius: 4,
                         width: "100%",
@@ -176,7 +247,7 @@ export default function Projects()
                         {{
                             width: "100%",
                             height: 220,
-                            backgroundColor: "rgba(255, 255, 255, 0.05)",
+                            backgroundColor: "rgba(133, 113, 113, 0)",
                             display: "flex",
                             alignItems: "center",
                             justifyContent: "center",
@@ -212,7 +283,7 @@ export default function Projects()
                             <h2 style=
                             {{
                                 color: "#ffffff",
-                                fontSize: 16,
+                                fontSize: 19,
                                 letterSpacing: 3,
                                 marginBottom: 8,
                                 fontFamily: "'Ribeye Marrow', serif",
@@ -234,7 +305,7 @@ export default function Projects()
                             <p style=
                             {{
                                 color: "rgba(255, 255, 255, 0.75)",
-                                fontSize: 12,
+                                fontSize: 16,
                                 letterSpacing: 1,
                                 lineHeight: 1.6,
                                 fontFamily: "'horizon', serif",
@@ -255,12 +326,12 @@ export default function Projects()
                                     flex: 1,
                                     padding: "8px 0",
                                     textAlign: "center",
-                                    backgroundColor: "#00000000",
-                                    border: "4px inset rgba(31, 30, 29, 0.79)",
+                                    backgroundColor: "#906cb9",
+                                    border: "4px inset rgb(124, 96, 156)",
                                     color: "#ffffff",
-                                    fontSize: 16,
+                                    fontSize: 19,
                                     letterSpacing: 2,
-                                    fontFamily: "'horizon', serif",
+                                    fontFamily: "'Ribeye Marrow', serif",
                                     textDecoration: "none",
                                     transition: "background 0.2s",
                                 }}>
@@ -271,12 +342,12 @@ export default function Projects()
                                     flex: 1,
                                     padding: "8px 0",
                                     textAlign: "center",
-                                    backgroundColor: "#d69696",
-                                    border: "4px inset rgb(163, 101, 101)",
+                                    backgroundColor: "#b26cb9",
+                                    border: "4px inset rgb(136, 84, 127)",
                                     color: "#ffffff",
-                                    fontSize: 16,
+                                    fontSize: 19,
                                     letterSpacing: 2,
-                                    fontFamily: "'horizon', serif",
+                                    fontFamily: "'Ribeye Marrow', serif",
                                     textDecoration: "none",
                                     transition: "background 0.2s",
                                 }}>
