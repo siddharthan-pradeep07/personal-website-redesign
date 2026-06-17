@@ -1,16 +1,53 @@
-# React + Vite
+# siddharthan.com
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<p align="center">
+  <img src="https://hackatime.hackclub.com/api/v1/badge/U092G90G5FS/siddharthan-pradeep07/personal-website-redesign" alt="Hackatime Badge"/>
+  <img src="https://img.shields.io/badge/React-61DAFB?style=flat&logo=react&logoColor=black" alt="React"/>
+  <img src="https://img.shields.io/badge/Vite-646CFF?style=flat&logo=vite&logoColor=white" alt="Vite"/>
+  <img src="https://img.shields.io/badge/GitHub_Pages-181717?style=flat&logo=github&logoColor=white" alt="GitHub Pages"/>
+</p>
 
-Currently, two official plugins are available:
+My personal portfolio site, built with React and Vite, hosted on GitHub Pages with a custom domain.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+The homepage shows a video in an old CRT TV. 
+Click it to head over to the projects page. 
+It feauters a intro card, showing a piece of text + social links, followed by my (siddharthan-pradeep07) commit frequency data, and then the project cards.
 
-## React Compiler
+- Uses React 18
+- vite
+- react icons for social links
+- site deploys to GitHub Pages via the `gh-pages` package.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Expanding the ESLint configuration
+## Clone it
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Clone the repo and install dependencies:
+
+```bash
+git clone https://github.com/siddharthan-pradeep07/personal-website-redesign.git
+cd personal-website-redesign
+npm install
+```
+
+Start the dev server:
+
+```bash
+npm run dev
+```
+
+Open `http://localhost:5173/` in your browser. The dev server hot-reloads on save.
+
+
+## quick files
+
+- src/app.jsx     --- (siddharthan.com)
+- src/project.jsx --- (siddharthan.com/projects)
+- src/cursor.jsx  --- (custom cursor)
+- src/assets/img  --- (project + background images)
+
+# note:
+- ```siddharthan.com/projects``` isn't directly accesible. Visit ```siddharthan.com``` and then click the TV to access it.
+
+# Made with 💙 by siddharthan
+
+**Siddharthan Pradeep** — [GitHub](https://github.com/siddharthan-pradeep07) · [siddharthansp07@gmail.com](mailto:siddharthansp07@gmail.com)

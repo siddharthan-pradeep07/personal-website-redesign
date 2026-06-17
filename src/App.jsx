@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom'
 import tvImage from "./assets/img/crt_tv.png";
-import bgImage from "./assets/img/bg.png";
+import bgImage from "./assets/img/bg_2.jpg";
 import myVideo from "./assets/videos/rr.mp4";
 
 export default function App() 
