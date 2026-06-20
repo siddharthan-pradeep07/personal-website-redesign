@@ -2,6 +2,7 @@ import {useNavigate} from "react-router-dom";
 import ReactMarkdown from "react-markdown";
 import posts from "./posts.js";
 import bgImage from "./assets/img/bg_8.jpg";
+import { play_hover_sound } from "./sound.js";
 
 export default function Blog()
 {
@@ -44,6 +45,7 @@ export default function Blog()
                 <button
                     onClick={() => navigate('/')}
                     className="press-btn"
+                    onMouseEnter={play_hover_sound}
                     style=
                     {{
                         padding: "10px 20px",
@@ -69,7 +71,7 @@ export default function Blog()
                 width: "100%",
             }}>
                 {sorted_posts.map((post, index) => (
-                    <div class="press-btn" key={index} style=
+                    <div className="press-btn" onMouseEnter={play_hover_sound} key={index} style=
                     {{
                         backgroundColor: "rgba(255, 240, 211, 0.95)",
                         border: "5px inset rgb(141, 141, 141)",

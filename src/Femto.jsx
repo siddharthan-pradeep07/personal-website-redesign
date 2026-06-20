@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { webEngine } from "sprig/web";
 import bgImage from "./assets/img/bg_8.jpg";
+import { play_hover_sound } from "./sound";
 
 export default function Femto()
 {
@@ -98,6 +99,7 @@ export default function Femto()
                 <button
                     onClick={() => navigate('/')}
                     className="press-btn"
+                    onMouseEnter={play_hover_sound}
                     style=
                     {{
                         padding: "10px 20px",
@@ -161,6 +163,7 @@ export default function Femto()
                     <button
                         onClick={() => press_key("w")}
                         className="press-btn"
+                        onMouseEnter={play_hover_sound}
                         style=
                         {{
                             width: 56,
@@ -179,6 +182,7 @@ export default function Femto()
                         <button
                             onClick={() => press_key("a")}
                             className="press-btn"
+                            onMouseEnter={play_hover_sound}
                             style=
                             {{
                                 width: 56,
@@ -196,6 +200,7 @@ export default function Femto()
                         <button
                             onClick={() => press_key("d")}
                             className="press-btn"
+                            onMouseEnter={play_hover_sound}
                             style=
                             {{
                                 width: 56,
@@ -215,8 +220,8 @@ export default function Femto()
 
                 <p style=
                 {{
-                    color: "#555555",
-                    fontSize: 13,
+                    color: "#080808",
+                    fontSize: 14,
                     letterSpacing: 1,
                     fontFamily: "'horizon', serif",
                     textAlign: "center",

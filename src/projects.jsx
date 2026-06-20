@@ -12,6 +12,7 @@ import pfpImg from "./assets/img/pfp.jpeg";
 import ReactMarkdown from "react-markdown";
 import posts from "./posts.js";
 import { useNavigate } from 'react-router-dom';
+import { play_hover_sound } from "./sound.js";
 
 export default function Projects()
 {
@@ -99,7 +100,7 @@ export default function Projects()
                 maxWidth: 960,
                 width: "100%"
             }}>
-                <img src = {pfpImg} className="press-btn" alt="why are you hovering? you can't grab me"
+                <img src = {pfpImg} className="press-btn" onMouseEnter={play_hover_sound} alt="why are you hovering? you can't grab me"
                   style=
                   {{
                     width:150,
@@ -143,16 +144,16 @@ export default function Projects()
                     gap: 14,
                     marginTop: 10,
                 }}>
-                    <a href="https://github.com/siddharthan-pradeep07" target="_blank" rel="noreferrer" className="press-btn"style={{ color: "#3b3628" }}>
+                    <a href="https://github.com/siddharthan-pradeep07" target="_blank" onMouseEnter={play_hover_sound} rel="noreferrer" className="press-btn"style={{ color: "#3b3628" }}>
                         <FaGithub size={40} />
                     </a>
-                    <a href="https://www.linkedin.com/in/siddharthan-pradeep-0202342a5/" target="_blank" className="press-btn" rel="noreferrer" style={{ color: "#3b3628" }}>
+                    <a href="https://www.linkedin.com/in/siddharthan-pradeep-0202342a5/" target="_blank" onMouseEnter={play_hover_sound} className="press-btn" rel="noreferrer" style={{ color: "#3b3628" }}>
                         <FaLinkedin size={40} />
                     </a>
-                    <a href="https://youtube.com/@siddharthan.pradeep" target="_blank" rel="noreferrer" className="press-btn" style={{ color: "#3b3628" }}>
+                    <a href="https://youtube.com/@siddharthan.pradeep" target="_blank" rel="noreferrer" onMouseEnter={play_hover_sound} className="press-btn" style={{ color: "#3b3628" }}>
                         <FaYoutube size={40} />
                     </a>
-                    <a href="mailto:siddharthansp07@gmail.com" className="press-btn" style={{ color: "#3b3628" }}>
+                    <a href="mailto:siddharthansp07@gmail.com" onMouseEnter={play_hover_sound} className="press-btn" style={{ color: "#3b3628" }}>
                         <MdEmail size={40} />
                     </a>
                 </div>
@@ -217,6 +218,7 @@ export default function Projects()
                         onClick=
                         {() => navigate('/blog')}
                         className="press-btn"
+                        onMouseEnter={play_hover_sound}
                         style=
                         {{
                             padding: "8px 20px",
@@ -235,6 +237,7 @@ export default function Projects()
                     src={latest_post.gif}
                     alt=""
                     className="press-btn"
+                    onMouseEnter={play_hover_sound}
                     style=
                     {{
                         width: 240,
@@ -324,6 +327,7 @@ export default function Projects()
                 fontSize: 52,
                 alignItems: "left",
                 letterSpacing: 6,
+                textShadow: 4,
                 fontFamily: "'Ribeye Marrow', serif",
                 marginBottom: 40,
             }}>
@@ -430,7 +434,7 @@ export default function Projects()
                             }}>
                                 {project.liveLink &&
                                 (
-                                    <a href={project.liveLink} target="_blank" rel="noreferrer" className="press-btn" style=
+                                    <a href={project.liveLink} target="_blank" onMouseEnter={play_hover_sound} rel="noreferrer" className="press-btn" style=
                                     {{
                                         flex: 1,
                                         padding: "8px 0",
@@ -447,7 +451,7 @@ export default function Projects()
                                         DEMO
                                     </a>
                                 )}
-                                <a href={project.codeLink} target="_blank" rel="noreferrer" className="press-btn" style=
+                                <a href={project.codeLink} target="_blank" onMouseEnter={play_hover_sound} rel="noreferrer" className="press-btn" style=
                                 {{
                                     flex: 1,
                                     padding: "8px 0",
@@ -465,13 +469,13 @@ export default function Projects()
                                 </a>
                                 {project.playLink &&
                                 (
-                                    <a href={project.playLink} className="press-btn" style=
+                                    <a href={project.playLink} onMouseEnter={play_hover_sound} className="press-btn" style=
                                     {{
                                         flex: 1,
                                         padding: "8px 0",
                                         textAlign: "center",
-                                        backgroundColor: "#2f90a8",
-                                        border: "4px inset rgb(35, 85, 126)",
+                                        backgroundColor: "#3e679e",
+                                        border: "4px inset rgb(90, 145, 190)",
                                         color: "#ffffff",
                                         fontSize: 19,
                                         letterSpacing: 2,
