@@ -13,8 +13,8 @@ createRoot(document.getElementById('root')).render(
       <Cursor />
       <Routes>
         <Route path="/blog" element={<Blog />} />
-        <Route path="/" element={<App />} />
-        <Route path="/projects" element={<Projects />} />
+        <Route path="/app" element={<App />} />
+        <Route path="/" element={<Projects />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>

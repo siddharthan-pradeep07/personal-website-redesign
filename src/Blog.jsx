@@ -1,4 +1,119 @@
-export default function Blog() 
+import {useNavigate} from "react-router-dom";
+import ReactMarkdown from "react-markdown";
+import posts from "./posts.js";
+import bgImage from "./assets/img/bg_8.jpg";
+
+export default function Blog()
 {
-    return <h1>Blog works!</h1>;
+    const navigate = useNavigate();
+
+    const sorted_posts = [...posts].sort((a, b) => new Date(b.date) - new Date(a.date));
+
+    return (
+        <div style=
+        {{
+            minHeight: "100vh",
+            width: "100vw",
+            backgroundImage: `url(${bgImage})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            fontFamily: "'Ribeye Marrow', serif",
+            padding: "100px 40px",
+        }}>
+            <div style=
+            {{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "space-between",
+                maxWidth: 960,
+                width: "100%",
+                marginBottom: 30,
+            }}>
+                <h1 style=
+                {{
+                    color: "#ffffff",
+                    fontSize: 44,
+                    letterSpacing: 4,
+                    fontFamily: "'Ribeye Marrow', serif",
+                }}>
+                    All blog posts
+                </h1>
+                <button
+                    onClick={() => navigate('/projects')}
+                    className="press-btn"
+                    style=
+                    {{
+                        padding: "10px 20px",
+                        backgroundColor: "#3f3e2c",
+                        border: "4px inset rgb(94, 90, 68)",
+                        color: "#ffffff",
+                        fontSize: 14,
+                        letterSpacing: 2,
+                        fontFamily: "'Ribeye Marrow', serif",
+                        cursor: "pointer",
+                    }}
+                >
+                    ↩ back to projects
+                </button>
+            </div>
+
+            <div style=
+            {{
+                display: "flex",
+                flexDirection: "column",
+                gap: 24,
+                maxWidth: 960,
+                width: "100%",
+            }}>
+                {sorted_posts.map((post, index) => (
+                    <div key={index} style=
+                    {{
+                        backgroundColor: "rgba(255, 240, 211, 0.95)",
+                        border: "5px inset rgb(141, 141, 141)",
+                        borderRadius: 1,
+                        width: "100%",
+                        padding: 24,
+                    }}>
+                        <div style={{ display: "flex", gap: 20, alignItems: "flex-start" }}>
+                            <div style={{ flex: 1, minWidth: 0 }}>
+                                <h2 style=
+                                {{
+                                    color: "#000000",
+                                    fontSize: 24,
+                                    letterSpacing: 1,
+                                    marginBottom: 6,
+                                    fontFamily: "'Ribeye Marrow', serif",
+                                    borderBottom: "3px solid rgba(111, 140, 102, 0.3)",
+                                }}>
+                                    {post.title}
+                                </h2>
+                                <p style=
+                                {{
+                                    color: "#555555",
+                                    fontSize: 12,
+                                    letterSpacing: 2,
+                                    marginBottom: 14,
+                                    fontFamily: "'horizon', serif",
+                                }}>
+                                    {post.date}
+                                </p>
+                                <div style=
+                                {{
+                                    color: "#000000",
+                                    fontSize: 15,
+                                    lineHeight: 1.6,
+                                    fontFamily: "'horizon', serif",
+                                }}>
+                                    <ReactMarkdown>{post.content}</ReactMarkdown>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                ))}
+            </div>
+        </div>
+    );
 }

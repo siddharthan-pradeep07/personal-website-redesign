@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom'
 import tvImage from "./assets/img/crt_tv.png";
-import bgImage from "./assets/img/bg_2.jpg";
+import bgImage from "./assets/img/bg_9.jpg";
 import myVideo from "./assets/videos/rr.mp4";
 
 export default function App() 
@@ -28,10 +28,9 @@ export default function App()
         textAlign: "center",
       }}>
         Welcome! Click the TV to get started!
-        {/* siddharthan.com is now up, yay*/}
       </h1>
       <div
-        onClick={() => navigate('/projects')}
+        onClick={() => navigate('/')}
         style={{
           position: "relative",
           width: 660,

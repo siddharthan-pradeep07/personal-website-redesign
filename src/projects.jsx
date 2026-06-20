@@ -1,6 +1,6 @@
 import { FaGithub, FaLinkedin, FaYoutube } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
-import bgImage from "./assets/img/bg_2.jpg";
+import bgImage from "./assets/img/bg_8.jpg";
 import amazerImg from "./assets/img/amazer.png";
 import bookImg from "./assets/img/book.png";
 import inplaceImg from "./assets/img/inpace1.jpg";
@@ -82,7 +82,7 @@ export default function Projects()
             alignItems: "center",
             justifyContent: "center",
             fontFamily: "'Ribeye Marrow', serif",
-            padding: "60px 40px",
+            padding: "100px 40px",
         }}>
             <div style=
             {{
@@ -91,7 +91,7 @@ export default function Projects()
                 borderRadius: "8px",
                 gap: 20,
                 marginBottm: 40,
-                backgroundColor: "#ffffff",
+                backgroundColor: "#fff0c8ec",
                 border: "3px solid #666666",
                 padding: "16px 24px",
                 maxWidth: 960,
@@ -126,22 +126,31 @@ export default function Projects()
                 }}>
                     Heya! I make cool stuff like robots, websites, rockets, electronics and CAD
                 </p>
+                <p style={{
+                    color: "#868686",
+                    fontSize: 16,
+                    letterSpacing: 1,
+                    fontFamily: "'horizon', serif",
+                    lineHeight: 1.6,
+                }}>
+                    (HE / HIM)
+                </p>
                 <div style=
                 {{
                     display: "flex",
                     gap: 14,
                     marginTop: 10,
                 }}>
-                    <a href="https://github.com/siddharthan-pradeep07" target="_blank" rel="noreferrer" style={{ color: "#000000" }}>
+                    <a href="https://github.com/siddharthan-pradeep07" target="_blank" rel="noreferrer" style={{ color: "#3b3628" }}>
                         <FaGithub size={40} />
                     </a>
-                    <a href="https://www.linkedin.com/in/siddharthan-pradeep-0202342a5/" target="_blank" rel="noreferrer" style={{ color: "#000000" }}>
+                    <a href="https://www.linkedin.com/in/siddharthan-pradeep-0202342a5/" target="_blank" rel="noreferrer" style={{ color: "#3b3628" }}>
                         <FaLinkedin size={40} />
                     </a>
-                    <a href="https://youtube.com/@siddharthan.pradeep" target="_blank" rel="noreferrer" style={{ color: "#000000" }}>
+                    <a href="https://youtube.com/@siddharthan.pradeep" target="_blank" rel="noreferrer" style={{ color: "#3b3628" }}>
                         <FaYoutube size={40} />
                     </a>
-                    <a href="mailto:siddharthansp07@gmail.com" style={{ color: "#000000" }}>
+                    <a href="mailto:siddharthansp07@gmail.com" style={{ color: "#3b3628" }}>
                         <MdEmail size={40} />
                     </a>
                 </div>
@@ -158,7 +167,7 @@ export default function Projects()
                     width: "100%",
                     marginTop: 24,
                     marginBottom: 0,
-                    backgroundColor: "#e4e4e4f3",
+                    backgroundColor: "#fff0c8e3",
                 }}>
                     <p style=
                     {{
@@ -170,6 +179,8 @@ export default function Projects()
                     }}>
                         Latest blog post
                     </p>
+                    <div style={{ display: "flex", gap: 1, alignItems: "flex-start" }}>
+                    <div style={{ flex: 1, minWidth: 0 }}>
                     <h2 style=
                     {{
                         color: "#000000",
@@ -192,7 +203,7 @@ export default function Projects()
                     </p>
                 <div style=
                 {{
-                    color: "#333333",
+                    color: "#000000",
                     fontSize: 15,
                     lineHeight: 1.6,
                     fontFamily: "'horizon', serif",
@@ -207,8 +218,8 @@ export default function Projects()
                         style=
                         {{
                             padding: "8px 20px",
-                            backgroundColor: "#906cb9",
-                            border: "4px inset rgb(124, 96, 156)",
+                            backgroundColor: "#3f3e2c",
+                            border: "4px inset rgb(94, 90, 68)",
                             color: "#ffffff",
                             fontSize: 14,
                             letterSpacing: 2,
@@ -217,6 +228,20 @@ export default function Projects()
                         }}>
                         ↪ all blogs
                     </button>
+                </div>
+                <img
+                    src={latest_post.gif}
+                    alt=""
+                    style={{
+                        width: 240,
+                        height: 150,
+                        objectFit: "cover",
+                        borderRadius: 4,
+                        border: "3px solid #4d4e4c",
+                        flexShrink: 0,
+                    }}
+                />
+                </div>
                 </div>
             )}
 
@@ -229,7 +254,7 @@ export default function Projects()
                 width: "100%",
                 marginTop: 24,
                 marginBottom: 24,
-                backgroundColor: "#e4e4e4f3",
+                backgroundColor: "#e4e4dae5",
             }}>
                 <p style=
                 {{
@@ -248,7 +273,6 @@ export default function Projects()
                     {{
                         width: "100%",
                         borderRadius: 4,
-                        filter: "invert(1)",
                         display: "block",
                     }}
                 />
@@ -269,13 +293,13 @@ export default function Projects()
                     }}>
                         Less
                     </p>
-                    {["#000000", "#56427e", "#7e5788", "#dea3e4"].map((color, i) => (
+                    {["#c6e48b", "#7bc96f", "#239a3b", "#195f26"].map((color, i) => (
                         <div key={i} style=
                         {{
                             width: 14,
                             height: 14,
                             backgroundColor: color,
-                            border: "1px solid rgba(255, 255, 255, 0.7)",
+                            border: "1px solid rgba(255, 255, 255, 0)",
                         }} 
                         />
                     ))}
@@ -311,7 +335,7 @@ export default function Projects()
                 {projects.map((project, index) => (
                     <div key={index} style=
                     {{
-                        backgroundColor: "rgba(255, 255, 255, 0.95)",
+                        backgroundColor: "rgba(255, 240, 211, 0.95)",
                         border: "5px inset rgb(141, 141, 141)",
                         borderRadius: 1,
                         width: "100%",
@@ -329,7 +353,7 @@ export default function Projects()
                             alignItems: "center",
                             justifyContent: "center",
                             overflow: "hidden",
-                            borderBottom: "3px solid rgb(0, 0, 0)",
+                            borderBottom: "3px solid #272727",
                         }}>
                             {project.image
                                 ? <img src={project.image} alt={project.name} style=
@@ -337,8 +361,9 @@ export default function Projects()
                                     width: "93%",
                                     height: "90%",
                                     objectFit: "cover",
+                                    borderRadius: 15,
                                     padding: "1px 1px",
-                                    border: "3px solid #000000",
+                                    border: "4px groove #3d3d3d",
                                 }} />
                                 : <span style=
                                 {{
@@ -364,7 +389,7 @@ export default function Projects()
                                 letterSpacing: 3,
                                 marginBottom: 10,
                                 fontFamily: "'Ribeye Marrow', serif",
-                                borderBottom: "3px solid rgba(0, 0, 0, 0.15)",
+                                borderBottom: "3px solid rgba(111, 140, 102, 0.3)",
                             }}>
                                 {project.name}
                             </h2>
@@ -375,7 +400,7 @@ export default function Projects()
                                 letterSpacing: 3,
                                 marginBottom: 1,
                                 fontFamily: "'horizon', serif",
-                                borderBottom: "3px solid rgba(0, 0, 0, 0.15)",
+                                borderBottom: "3px solid rgba(111, 140, 102, 0.3)",
                             }}>
                                 {project.date}
                             </p>
@@ -388,7 +413,7 @@ export default function Projects()
                                 fontFamily: "'horizon', serif",
                                 flexGrow: 1,
                                 marginBottom: 16,
-                                borderBottom: "3px solid rgba(0, 0, 0, 0.15)",
+                                borderBottom: "3px solid rgba(111, 140, 102, 0.3)",
                             }}>
                                 {project.description}
                             </p>
@@ -403,8 +428,8 @@ export default function Projects()
                                     flex: 1,
                                     padding: "8px 0",
                                     textAlign: "center",
-                                    backgroundColor: "#716cb9",
-                                    border: "4px inset rgb(85, 84, 136)",
+                                    backgroundColor: "#3f3e2c",
+                                    border: "4px inset rgb(94, 90, 68)",
                                     color: "#ffffff",
                                     fontSize: 19,
                                     letterSpacing: 2,
@@ -419,8 +444,8 @@ export default function Projects()
                                     flex: 1,
                                     padding: "8px 0",
                                     textAlign: "center",
-                                    backgroundColor: "#716cb9",
-                                    border: "4px inset rgb(85, 84, 136)",
+                                    backgroundColor: "#576354",
+                                    border: "4px inset rgb(126, 136, 123)",
                                     color: "#ffffff",
                                     fontSize: 19,
                                     letterSpacing: 2,
