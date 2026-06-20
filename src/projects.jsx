@@ -82,7 +82,7 @@ export default function Projects()
             alignItems: "center",
             justifyContent: "center",
             fontFamily: "'Ribeye Marrow', serif",
-            padding: "100px 40px",
+            padding: "60px 40px",
         }}>
             <div style=
             {{
@@ -97,11 +97,11 @@ export default function Projects()
                 maxWidth: 960,
                 width: "100%"
             }}>
-                <img src = {pfpImg} alt="why are you hovering? you can't grab me"
+                <img src = {pfpImg} className="press-btn" alt="why are you hovering? you can't grab me"
                   style=
                   {{
-                    width:120,
-                    height:120,
+                    width:150,
+                    height:150,
                     borderRadius: "10%",
                     objectFit: "cover",
                     flexShrink: 0,
@@ -127,13 +127,13 @@ export default function Projects()
                     Heya! I make cool stuff like robots, websites, rockets, electronics and CAD
                 </p>
                 <p style={{
-                    color: "#868686",
+                    color: "#353535",
                     fontSize: 16,
                     letterSpacing: 1,
                     fontFamily: "'horizon', serif",
                     lineHeight: 1.6,
                 }}>
-                    (HE / HIM)
+                   <i><b>Born 15 year ago</b> (HE/HIM)</i> 
                 </p>
                 <div style=
                 {{
@@ -141,16 +141,16 @@ export default function Projects()
                     gap: 14,
                     marginTop: 10,
                 }}>
-                    <a href="https://github.com/siddharthan-pradeep07" target="_blank" rel="noreferrer" style={{ color: "#3b3628" }}>
+                    <a href="https://github.com/siddharthan-pradeep07" target="_blank" rel="noreferrer" className="press-btn"style={{ color: "#3b3628" }}>
                         <FaGithub size={40} />
                     </a>
-                    <a href="https://www.linkedin.com/in/siddharthan-pradeep-0202342a5/" target="_blank" rel="noreferrer" style={{ color: "#3b3628" }}>
+                    <a href="https://www.linkedin.com/in/siddharthan-pradeep-0202342a5/" target="_blank" className="press-btn" rel="noreferrer" style={{ color: "#3b3628" }}>
                         <FaLinkedin size={40} />
                     </a>
-                    <a href="https://youtube.com/@siddharthan.pradeep" target="_blank" rel="noreferrer" style={{ color: "#3b3628" }}>
+                    <a href="https://youtube.com/@siddharthan.pradeep" target="_blank" rel="noreferrer" className="press-btn" style={{ color: "#3b3628" }}>
                         <FaYoutube size={40} />
                     </a>
-                    <a href="mailto:siddharthansp07@gmail.com" style={{ color: "#3b3628" }}>
+                    <a href="mailto:siddharthansp07@gmail.com" className="press-btn" style={{ color: "#3b3628" }}>
                         <MdEmail size={40} />
                     </a>
                 </div>
@@ -232,7 +232,9 @@ export default function Projects()
                 <img
                     src={latest_post.gif}
                     alt=""
-                    style={{
+                    className="press-btn"
+                    style=
+                    {{
                         width: 240,
                         height: 150,
                         objectFit: "cover",
@@ -316,8 +318,9 @@ export default function Projects()
             </div>
             <h1 style=
             {{
-                color: "#ffffff",
+                color: "#fff9d6",
                 fontSize: 52,
+                alignItems: "left",
                 letterSpacing: 6,
                 fontFamily: "'Ribeye Marrow', serif",
                 marginBottom: 40,
@@ -333,7 +336,7 @@ export default function Projects()
                 width: "90%",
             }}>
                 {projects.map((project, index) => (
-                    <div key={index} style=
+                    <div className="press-btn" key={index} style=
                     {{
                         backgroundColor: "rgba(255, 240, 211, 0.95)",
                         border: "5px inset rgb(141, 141, 141)",

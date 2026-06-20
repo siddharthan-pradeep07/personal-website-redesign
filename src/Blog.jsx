@@ -42,7 +42,7 @@ export default function Blog()
                     All blog posts
                 </h1>
                 <button
-                    onClick={() => navigate('/projects')}
+                    onClick={() => navigate('/')}
                     className="press-btn"
                     style=
                     {{
@@ -56,7 +56,7 @@ export default function Blog()
                         cursor: "pointer",
                     }}
                 >
-                    ↩ back to projects
+                    ↩ back to home
                 </button>
             </div>
 
@@ -69,7 +69,7 @@ export default function Blog()
                 width: "100%",
             }}>
                 {sorted_posts.map((post, index) => (
-                    <div key={index} style=
+                    <div class="press-btn" key={index} style=
                     {{
                         backgroundColor: "rgba(255, 240, 211, 0.95)",
                         border: "5px inset rgb(141, 141, 141)",
@@ -110,6 +110,22 @@ export default function Blog()
                                     <ReactMarkdown>{post.content}</ReactMarkdown>
                                 </div>
                             </div>
+                            {post.gif &&
+                            (
+                                <img
+                                    src={post.gif}
+                                    alt=""
+                                    style=
+                                    {{
+                                        width: 200,
+                                        height: 150,
+                                        objectFit: "cover",
+                                        borderRadius: 4,
+                                        border: "3px solid #4d4e4c",
+                                        flexShrink: 0,
+                                    }}
+                                />
+                            )}
                         </div>
                     </div>
                 ))}

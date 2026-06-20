@@ -1,1 +1,1 @@
-heya! test test test lorem ipsum. 
+heya! This is my first blog, just testing things in the website, hope it works :> 
