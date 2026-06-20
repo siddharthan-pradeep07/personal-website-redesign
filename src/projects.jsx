@@ -48,8 +48,10 @@ export default function Projects()
             description: "A javascript platforer game based on a hen",
             date: "JUL 2025",
             image: FemtoImg,
-            liveLink: "http://i-do-not-have-a-demo-for-this.com/",
+            playLink: "/femto",
+            // liveLink: "http://i-do-not-have-a-demo-for-this.com/",
             codeLink: "https://github.com/hackclub/sprig/pull/3172",
+            
         },
         {
             name: "Printly 3D",
@@ -426,22 +428,25 @@ export default function Projects()
                                 display: "flex",
                                 gap: 10,
                             }}>
-                                <a href={project.liveLink} target="_blank" rel="noreferrer" className="press-btn" style=
-                                {{
-                                    flex: 1,
-                                    padding: "8px 0",
-                                    textAlign: "center",
-                                    backgroundColor: "#3f3e2c",
-                                    border: "4px inset rgb(94, 90, 68)",
-                                    color: "#ffffff",
-                                    fontSize: 19,
-                                    letterSpacing: 2,
-                                    fontFamily: "'Ribeye Marrow', serif",
-                                    textDecoration: "none",
-                                    transition: "background 0.2s",
-                                }}>
-                                    DEMO
-                                </a>
+                                {project.liveLink &&
+                                (
+                                    <a href={project.liveLink} target="_blank" rel="noreferrer" className="press-btn" style=
+                                    {{
+                                        flex: 1,
+                                        padding: "8px 0",
+                                        textAlign: "center",
+                                        backgroundColor: "#3f3e2c",
+                                        border: "4px inset rgb(94, 90, 68)",
+                                        color: "#ffffff",
+                                        fontSize: 19,
+                                        letterSpacing: 2,
+                                        fontFamily: "'Ribeye Marrow', serif",
+                                        textDecoration: "none",
+                                        transition: "background 0.2s",
+                                    }}>
+                                        DEMO
+                                    </a>
+                                )}
                                 <a href={project.codeLink} target="_blank" rel="noreferrer" className="press-btn" style=
                                 {{
                                     flex: 1,
@@ -458,6 +463,25 @@ export default function Projects()
                                 }}>
                                     CODE
                                 </a>
+                                {project.playLink &&
+                                (
+                                    <a href={project.playLink} className="press-btn" style=
+                                    {{
+                                        flex: 1,
+                                        padding: "8px 0",
+                                        textAlign: "center",
+                                        backgroundColor: "#2f90a8",
+                                        border: "4px inset rgb(35, 85, 126)",
+                                        color: "#ffffff",
+                                        fontSize: 19,
+                                        letterSpacing: 2,
+                                        fontFamily: "'Ribeye Marrow', serif",
+                                        textDecoration: "none",
+                                        transition: "background 0.2s",
+                                    }}>
+                                        PLAY
+                                    </a>
+                                )}
                             </div>
                         </div>
                     </div>
