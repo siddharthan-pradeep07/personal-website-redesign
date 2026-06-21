@@ -1,6 +1,9 @@
+// SOCIAL LINKS (ICONS)
 import { FaGithub, FaLinkedin, FaYoutube } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
+// BACKGROUND
 import bgImage from "./assets/img/bg_15.jpg";
+//PROJECT CARD IMGS (USED & UNUSED)
 import amazerImg from "./assets/img/amazer.png";
 import bookImg from "./assets/img/book.png";
 import inplaceImg from "./assets/img/inpace1.jpg";
@@ -8,7 +11,9 @@ import FemtoImg from "./assets/img/femto_game_thumbnail.png";
 import ppImg from "./assets/img/plasma_photo.jpg";
 import printlyImg from "./assets/img/printly_home2.png";
 import MicroImg from "./assets/img/micro_mouse.jpeg";
+//PFP ON INTRO CARD
 import pfpImg from "./assets/img/pfp.jpeg";
+// OTHER (MARKDOWN RENDER, POSTS, SOUND EFFECT)
 import ReactMarkdown from "react-markdown";
 import posts from "./posts.js";
 import { useNavigate } from 'react-router-dom';
@@ -18,6 +23,7 @@ export default function Projects()
 {
     const navigate = useNavigate();
     const latest_post = [...posts].sort((a, b) => new Date(b.date) - new Date(a.date))[0];
+    // PROJECT CARD INFO
     const projects =
     [
         {
@@ -85,6 +91,7 @@ export default function Projects()
             fontFamily: "'Ribeye Marrow', serif",
             padding: "60px 40px",
         }}>
+            {/* INTRO CARD */}
             <div className="intro-card" style=
             {{
                 display: "flex",
@@ -98,6 +105,7 @@ export default function Projects()
                 maxWidth: 960,
                 width: "100%"
             }}>
+                {/* INTRO CARD - PFP IMAGE */}
                 <img src = {pfpImg} className="press-btn" onMouseEnter={play_hover_sound} alt="huh, try refreshing to see me"
                   style=
                   {{
@@ -109,7 +117,28 @@ export default function Projects()
                     border: "2px solid #000000"
                   }}
                 />
+                {/* INTRO CARD - TEXT */}
                 <div className="intro-text">
+                    <p style={{
+                        color: "#000000",
+                        fontSize: 26,
+                        letterSpacing: 1,
+                        fontFamily: "'Ribeye Marrow', serif",
+                        lineHeight: 1.6,
+                    }}>
+                        Heya! I make cool stuff like robots, websites, rockets, electronics and CAD
+                    </p>
+                    <p style={{
+                        color: "#353535",
+                        fontSize: 16,
+                        letterSpacing: 1,
+                        fontFamily: "'horizon', serif",
+                        lineHeight: 1.6,
+                        marginBottom: 10,
+                    }}>
+                       <i><b>Born 15 year ago</b> (HE/HIM)</i>
+                    </p>
+                    {/* INTRO CARD - ICONS */}
                     <div className="intro-socials" style=
                     {{
                         display: "flex",
@@ -129,28 +158,12 @@ export default function Projects()
                             <MdEmail size={40} />
                         </a>
                     </div>
-                    <p style={{
-                        color: "#000000",
-                        fontSize: 26,
-                        letterSpacing: 1,
-                        fontFamily: "'Ribeye Marrow', serif",
-                        lineHeight: 1.6,
-                    }}>
-                        Heya! I make cool stuff like robots, websites, rockets, electronics and CAD
-                    </p>
-                    <p style={{
-                        color: "#353535",
-                        fontSize: 16,
-                        letterSpacing: 1,
-                        fontFamily: "'horizon', serif",
-                        lineHeight: 1.6,
-                    }}>
-                       <i><b>Born 15 year ago</b> (HE/HIM)</i>
-                    </p>
                 </div>
             </div>
+            {/* BLOG CARD - FETCHES THE LATEST POST */}
             {latest_post &&
             (
+                // BLOG CARD
                 <div className="blog-card" style=
                 {{
                     border: "3px solid #666666",
@@ -162,6 +175,7 @@ export default function Projects()
                     marginBottom: 0,
                     backgroundColor: "#fff0c8e3",
                 }}>
+                    {/* BLOG CARD - TEXT */}
                     <p style=
                     {{
                         color: "#000000",
@@ -204,6 +218,7 @@ export default function Projects()
                 }}>
                 <ReactMarkdown>{latest_post.content.slice(0, 200) + "..."}</ReactMarkdown>
                     </div>
+                    {/* BUTTON - LINKED TO /BLOG */}
                     <button
                         onClick=
                         {() => navigate('/blog')}
@@ -223,6 +238,7 @@ export default function Projects()
                         ↪ all posts
                     </button>
                 </div>
+                {/* gif */}
                 <img
                     src={latest_post.gif}
                     alt=""
@@ -241,6 +257,7 @@ export default function Projects()
                 </div>
                 </div>
             )}
+            {/* COMMIT DENSITY GRAPH */}
             <div className="commit-card" style=
             {{
                 border: "3px solid #666666",
@@ -335,6 +352,7 @@ export default function Projects()
                 Here's my top projects
             </h1>
             </div>
+            {/* PROJECT CARDS */}
             <div className="project-grid" style=
             {{
                 display: "grid",
@@ -394,6 +412,7 @@ export default function Projects()
                             flexDirection: "column",
                             flexGrow: 1,
                         }}>
+                            {/* PROJECT NAME - TITLE */}
                             <h2 style=
                             {{
                                 color: "#000000",
@@ -405,6 +424,7 @@ export default function Projects()
                             }}>
                                 {project.name}
                             </h2>
+                            {/* PROJECT DATE*/}
                             <p style=
                             {{
                                 color: "#000000",
@@ -416,6 +436,7 @@ export default function Projects()
                             }}>
                                 {project.date}
                             </p>
+                            {/* PROJECT DESCRIPTION */}
                             <p style=
                             {{
                                 color: "rgba(0, 0, 0, 0.75)",
@@ -430,6 +451,7 @@ export default function Projects()
                                 {project.description}
                             </p>
 
+                            {/* LINKS - BUTTON */}
                             <div style=
                             {{
                                 display: "flex",
@@ -437,6 +459,7 @@ export default function Projects()
                             }}>
                                 {project.liveLink &&
                                 (
+                                    // DEMO BUTTON
                                     <a href={project.liveLink} target="_blank" onMouseEnter={play_hover_sound} rel="noreferrer" className="press-btn" style=
                                     {{
                                         flex: 1,
@@ -454,6 +477,7 @@ export default function Projects()
                                         DEMO
                                     </a>
                                 )}
+                                {/* GITHUB LINK - BUTTON */}
                                 <a href={project.codeLink} target="_blank" onMouseEnter={play_hover_sound} rel="noreferrer" className="press-btn" style=
                                 {{
                                     flex: 1,
@@ -470,6 +494,7 @@ export default function Projects()
                                 }}>
                                     CODE
                                 </a>
+                                {/* PLAY BUTTON - ONLY FOR "FEMTO" PROJECT CARD */}
                                 {project.playLink &&
                                 (
                                     <a href={project.playLink} onMouseEnter={play_hover_sound} className="press-btn" style=

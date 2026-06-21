@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
+
 import posts from "./posts.js";
 import bgImage from "./assets/img/bg_8.jpg";
+
 import { play_hover_sound } from "./sound.js";
 
 export default function Blog()
@@ -49,6 +51,7 @@ export default function Blog()
                 }}>
                     All blog posts
                 </h1>
+                {/* BACK TO HOME - BUTTON */}
                 <button
                     onClick={() => navigate('/')}
                     className="press-btn"
@@ -77,6 +80,7 @@ export default function Blog()
                 maxWidth: 960,
                 width: "100%",
             }}>
+                {/* BLOG DISPLAY */}
                 {sorted_posts.map((post, index) => (
                     <div key={index} className="flip-card-container" onClick={() => toggle_flip(index)} style={{ cursor: "pointer" }}>
                         <div className={"flip-card-inner" + (flipped_index === index ? " flipped" : "")}>
@@ -139,6 +143,7 @@ export default function Blog()
                                     )}
                                 </div>
                             </div>
+                            {/* IMAGE DISPLAY ON FLIP */}
                             <div className="flip-card-back" 
                             style=
                             {{
@@ -162,6 +167,7 @@ export default function Blog()
                                             border: "3px solid #4d4e4c",
                                         }} />
                                     ))
+                                    // ALT TEXT 
                                     : <p style=
                                     {{
                                         color: "#555555",
