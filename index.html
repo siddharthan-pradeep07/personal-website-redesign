@@ -8,7 +8,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ribeye+Marrow&display=swap" rel="stylesheet">
-    <script type="module" crossorigin src="/assets/index-CsUEUn0s.js"></script>
+    <script>
+        const path = new URLSearchParams(window.location.search).get('path');
+          if (path) 
+          {
+            window.history.replaceState(null, '', '/' + path);
+          }
+    </script>
+    <script type="module" crossorigin src="/assets/index-CF5rGQUG.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/index-i6CUPjFR.css">
   </head>
   <body>
