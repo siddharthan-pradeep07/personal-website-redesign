@@ -1,4 +1,5 @@
-import {useNavigate} from "react-router-dom";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
 import posts from "./posts.js";
 import bgImage from "./assets/img/bg_8.jpg";
@@ -7,8 +8,14 @@ import { play_hover_sound } from "./sound.js";
 export default function Blog()
 {
     const navigate = useNavigate();
+    const [flipped_index, setFlippedIndex] = useState(null);
 
     const sorted_posts = [...posts].sort((a, b) => new Date(b.date) - new Date(a.date));
+
+    function toggle_flip(index)
+    {
+        setFlippedIndex(flipped_index === index ? null : index);
+    }
 
     return (
         <div style=
@@ -71,63 +78,100 @@ export default function Blog()
                 width: "100%",
             }}>
                 {sorted_posts.map((post, index) => (
-                    <div className="press-btn" onMouseEnter={play_hover_sound} key={index} style=
-                    {{
-                        backgroundColor: "rgba(255, 240, 211, 0.95)",
-                        border: "5px inset rgb(141, 141, 141)",
-                        borderRadius: 1,
-                        width: "100%",
-                        padding: 24,
-                    }}>
-                        <div style={{ display: "flex", gap: 20, alignItems: "flex-start" }}>
-                            <div style={{ flex: 1, minWidth: 0 }}>
-                                <h2 style=
-                                {{
-                                    color: "#000000",
-                                    fontSize: 24,
-                                    letterSpacing: 1,
-                                    marginBottom: 6,
-                                    fontFamily: "'Ribeye Marrow', serif",
-                                    borderBottom: "3px solid rgba(111, 140, 102, 0.3)",
-                                }}>
-                                    {post.title}
-                                </h2>
-                                <p style=
-                                {{
-                                    color: "#555555",
-                                    fontSize: 12,
-                                    letterSpacing: 2,
-                                    marginBottom: 14,
-                                    fontFamily: "'horizon', serif",
-                                }}>
-                                    {post.date}
-                                </p>
-                                <div style=
-                                {{
-                                    color: "#000000",
-                                    fontSize: 15,
-                                    lineHeight: 1.6,
-                                    fontFamily: "'horizon', serif",
-                                }}>
-                                    <ReactMarkdown>{post.content}</ReactMarkdown>
+                    <div key={index} className="flip-card-container" onClick={() => toggle_flip(index)} style={{ cursor: "pointer" }}>
+                        <div className={"flip-card-inner" + (flipped_index === index ? " flipped" : "")}>
+                            <div className="flip-card-front press-btn" onMouseEnter={play_hover_sound} style=
+                            {{
+                                backgroundColor: "rgba(255, 240, 211, 0.95)",
+                                border: "5px inset rgb(141, 141, 141)",
+                                borderRadius: 1,
+                                padding: 24,
+                            }}>
+                                <div style={{ display: "flex", gap: 20, alignItems: "flex-start" }}>
+                                    <div style={{ flex: 1, minWidth: 0 }}>
+                                        <h2 style=
+                                        {{
+                                            color: "#000000",
+                                            fontSize: 24,
+                                            letterSpacing: 1,
+                                            marginBottom: 6,
+                                            fontFamily: "'Ribeye Marrow', serif",
+                                            borderBottom: "3px solid rgba(111, 140, 102, 0.3)",
+                                        }}>
+                                            {post.title}
+                                        </h2>
+                                        <p style=
+                                        {{
+                                            color: "#555555",
+                                            fontSize: 12,
+                                            letterSpacing: 2,
+                                            marginBottom: 14,
+                                            fontFamily: "'horizon', serif",
+                                        }}>
+                                            {post.date}
+                                        </p>
+                                        <div style=
+                                        {{
+                                            color: "#000000",
+                                            fontSize: 15,
+                                            lineHeight: 1.6,
+                                            fontFamily: "'horizon', serif",
+                                        }}>
+                                            <ReactMarkdown>{post.content}</ReactMarkdown>
+                                        </div>
+                                    </div>
+
+                                    {post.gif &&
+                                    (
+                                        <img
+                                            src={post.gif}
+                                            alt=""
+                                            style=
+                                            {{
+                                                width: 200,
+                                                height: 150,
+                                                objectFit: "cover",
+                                                borderRadius: 4,
+                                                border: "3px solid #4d4e4c",
+                                                flexShrink: 0,
+                                            }}
+                                        />
+                                    )}
                                 </div>
                             </div>
-                            {post.gif &&
-                            (
-                                <img
-                                    src={post.gif}
-                                    alt=""
-                                    style=
+                            <div className="flip-card-back" 
+                            style=
+                            {{
+                                backgroundColor: "rgba(255, 240, 211, 0.95)",
+                                border: "5px inset rgb(141, 141, 141)",
+                                borderRadius: 1,
+                                padding: 24,
+                                display: "flex",
+                                alignItems: "center",
+                                justifyContent: "center",
+                                gap: 12,
+                            }}>
+                                {post.images && post.images.length > 0
+                                    ? post.images.map((img, i) => (
+                                        <img key={i} src={img} alt="" style=
+                                        {{
+                                            flex: 1,
+                                            height: 220,
+                                            objectFit: "cover",
+                                            borderRadius: 4,
+                                            border: "3px solid #4d4e4c",
+                                        }} />
+                                    ))
+                                    : <p style=
                                     {{
-                                        width: 200,
-                                        height: 150,
-                                        objectFit: "cover",
-                                        borderRadius: 4,
-                                        border: "3px solid #4d4e4c",
-                                        flexShrink: 0,
-                                    }}
-                                />
-                            )}
+                                        color: "#555555",
+                                        fontSize: 14,
+                                        fontFamily: "'horizon', serif",
+                                    }}>
+                                        This post doesn't have any images attached :sob:
+                                    </p>
+                                }
+                            </div>
                         </div>
                     </div>
                 ))}

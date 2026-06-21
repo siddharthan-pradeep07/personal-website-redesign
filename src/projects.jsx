@@ -1,6 +1,6 @@
 import { FaGithub, FaLinkedin, FaYoutube } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
-import bgImage from "./assets/img/bg_8.jpg";
+import bgImage from "./assets/img/bg_15.jpg";
 import amazerImg from "./assets/img/amazer.png";
 import bookImg from "./assets/img/book.png";
 import inplaceImg from "./assets/img/inpace1.jpg";
@@ -100,7 +100,7 @@ export default function Projects()
                 maxWidth: 960,
                 width: "100%"
             }}>
-                <img src = {pfpImg} className="press-btn" onMouseEnter={play_hover_sound} alt="why are you hovering? you can't grab me"
+                <img src = {pfpImg} className="press-btn" onMouseEnter={play_hover_sound} alt="huh, try refreshing to see me"
                   style=
                   {{
                     width:150,
@@ -321,18 +321,29 @@ export default function Projects()
                     </p>
                 </div>
             </div>
+            <div style=
+            {{
+                backgroundColor: "rgba(63, 53, 34, 0.95)",
+                border: "5px inset rgb(100, 91, 70)",
+                borderRadius: 1,
+                padding: "14px 28px",
+                display: "inline-flex",
+                alignItems: "center",
+                justifyContent: "center",
+                marginBottom: 25,
+            }}>
             <h1 style=
             {{
-                color: "#fff9d6",
-                fontSize: 52,
-                alignItems: "left",
-                letterSpacing: 6,
-                textShadow: 4,
+                color: "rgb(255, 255, 221)",
+                fontSize: 28,
+                letterSpacing: 4,
                 fontFamily: "'Ribeye Marrow', serif",
-                marginBottom: 40,
+                margin: 0,
+                textAlign: "center",
             }}>
-                Here's my top projects!
+                Here's my top projects
             </h1>
+            </div>
             <div style=
             {{
                 display: "grid",
@@ -340,9 +351,10 @@ export default function Projects()
                 gap: "20px",
                 maxWidth: 960,
                 width: "90%",
+                marginBottom: 320,
             }}>
                 {projects.map((project, index) => (
-                    <div className="press-btn" key={index} style=
+                    <div className="press-btn flip-card-front" key={index} style=
                     {{
                         backgroundColor: "rgba(255, 240, 211, 0.95)",
                         border: "5px inset rgb(141, 141, 141)",
@@ -474,8 +486,8 @@ export default function Projects()
                                         flex: 1,
                                         padding: "8px 0",
                                         textAlign: "center",
-                                        backgroundColor: "#3e679e",
-                                        border: "4px inset rgb(90, 145, 190)",
+                                        backgroundColor: "#415f3b",
+                                        border: "4px inset rgb(90, 124, 78)",
                                         color: "#ffffff",
                                         fontSize: 19,
                                         letterSpacing: 2,
