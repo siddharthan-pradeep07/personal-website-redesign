@@ -14,6 +14,12 @@ import gif1 from "./assets/videos/ex_1.gif";
 //IMAGES
 import p2_i1 from "./assets/img/mofl_translater.png";
 import p2_i2 from "./assets/img/pfp.jpeg";
+import p2_i3 from "./assets/img/blahaj.jpg";
+import p2_i4 from "./assets/img/pocketmage.jpg";
+import p3_i1 from "./assets/img/crabby/image_1.png";
+import p3_i2 from "./assets/img/crabby/image_2.jpeg";
+import p3_i3 from "./assets/img/crabby/image_3.jpeg";
+import p3_i4 from "./assets/img/crabby/image_4.jpeg";
 
 const posts = [
     {
@@ -22,6 +28,7 @@ const posts = [
         date: "20/6/2026",
         content: post2,
         gif: gif6,
+        images: [p3_i1, p3_i2, p3_i3,],
     },
     {
         slug: "second-post",
@@ -29,7 +36,7 @@ const posts = [
         date: "18/6/2026",
         content: post3,
         gif: gif2,
-        images: [p2_i1, p2_i2],
+        images: [p2_i1, p2_i3, p2_i4],
     },
     {
         slug: "first-post",

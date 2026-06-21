@@ -181,3 +181,34 @@ code {
     transform: rotateX(180deg);
     min-height: 100%;
 }
+
+@media (max-width: 700px)
+{
+    .intro-card
+    {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .intro-socials
+    {
+        justify-content: center;
+    }
+
+    .blog-card-body
+    {
+        flex-direction: column;
+    }
+
+    .blog-card-gif
+    {
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    .project-grid
+    {
+        grid-template-columns: 1fr !important;
+        width: 100% !important;
+    }
+}

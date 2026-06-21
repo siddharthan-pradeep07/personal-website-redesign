@@ -168,7 +168,7 @@ export default function Blog()
                                         fontSize: 14,
                                         fontFamily: "'horizon', serif",
                                     }}>
-                                        This post doesn't have any images attached :sob:
+                                        This post doesn't have any images attached, and you know... I'm lazy to add those images.
                                     </p>
                                 }
                             </div>

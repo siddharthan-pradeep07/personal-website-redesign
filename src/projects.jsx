@@ -50,9 +50,7 @@ export default function Projects()
             date: "JUL 2025",
             image: FemtoImg,
             playLink: "/femto",
-            // liveLink: "http://i-do-not-have-a-demo-for-this.com/",
             codeLink: "https://github.com/hackclub/sprig/pull/3172",
-            
         },
         {
             name: "Printly 3D",
@@ -87,7 +85,7 @@ export default function Projects()
             fontFamily: "'Ribeye Marrow', serif",
             padding: "60px 40px",
         }}>
-            <div style=
+            <div className="intro-card" style=
             {{
                 display: "flex",
                 alignItems: "center",
@@ -111,57 +109,49 @@ export default function Projects()
                     border: "2px solid #000000"
                   }}
                 />
-                <div>
+                <div className="intro-text">
+                    <div className="intro-socials" style=
+                    {{
+                        display: "flex",
+                        gap: 14,
+                        marginBottom: 10,
+                    }}>
+                        <a href="https://github.com/siddharthan-pradeep07" target="_blank" onMouseEnter={play_hover_sound} rel="noreferrer" className="press-btn"style={{ color: "#3b3628" }}>
+                            <FaGithub size={40} />
+                        </a>
+                        <a href="https://www.linkedin.com/in/siddharthan-pradeep-0202342a5/" target="_blank" onMouseEnter={play_hover_sound} className="press-btn" rel="noreferrer" style={{ color: "#3b3628" }}>
+                            <FaLinkedin size={40} />
+                        </a>
+                        <a href="https://youtube.com/@siddharthan.pradeep" target="_blank" rel="noreferrer" onMouseEnter={play_hover_sound} className="press-btn" style={{ color: "#3b3628" }}>
+                            <FaYoutube size={40} />
+                        </a>
+                        <a href="mailto:siddharthansp07@gmail.com" onMouseEnter={play_hover_sound} className="press-btn" style={{ color: "#3b3628" }}>
+                            <MdEmail size={40} />
+                        </a>
+                    </div>
                     <p style={{
-                    color: "#fff5db",
-                    fontSize: 16,
-                    letterSpacing: 2,
-                    fontFamily: "'Ribeye Marrow', serif",
-                    marginBottom: 6,
-                }}>
-                </p>
-                <p style={{
-                    color: "#000000",
-                    fontSize: 26,
-                    letterSpacing: 1,
-                    fontFamily: "'Ribeye Marrow', serif",
-                    lineHeight: 1.6,
-                }}>
-                    Heya! I make cool stuff like robots, websites, rockets, electronics and CAD
-                </p>
-                <p style={{
-                    color: "#353535",
-                    fontSize: 16,
-                    letterSpacing: 1,
-                    fontFamily: "'horizon', serif",
-                    lineHeight: 1.6,
-                }}>
-                   <i><b>Born 15 year ago</b> (HE/HIM)</i> 
-                </p>
-                <div style=
-                {{
-                    display: "flex",
-                    gap: 14,
-                    marginTop: 10,
-                }}>
-                    <a href="https://github.com/siddharthan-pradeep07" target="_blank" onMouseEnter={play_hover_sound} rel="noreferrer" className="press-btn"style={{ color: "#3b3628" }}>
-                        <FaGithub size={40} />
-                    </a>
-                    <a href="https://www.linkedin.com/in/siddharthan-pradeep-0202342a5/" target="_blank" onMouseEnter={play_hover_sound} className="press-btn" rel="noreferrer" style={{ color: "#3b3628" }}>
-                        <FaLinkedin size={40} />
-                    </a>
-                    <a href="https://youtube.com/@siddharthan.pradeep" target="_blank" rel="noreferrer" onMouseEnter={play_hover_sound} className="press-btn" style={{ color: "#3b3628" }}>
-                        <FaYoutube size={40} />
-                    </a>
-                    <a href="mailto:siddharthansp07@gmail.com" onMouseEnter={play_hover_sound} className="press-btn" style={{ color: "#3b3628" }}>
-                        <MdEmail size={40} />
-                    </a>
+                        color: "#000000",
+                        fontSize: 26,
+                        letterSpacing: 1,
+                        fontFamily: "'Ribeye Marrow', serif",
+                        lineHeight: 1.6,
+                    }}>
+                        Heya! I make cool stuff like robots, websites, rockets, electronics and CAD
+                    </p>
+                    <p style={{
+                        color: "#353535",
+                        fontSize: 16,
+                        letterSpacing: 1,
+                        fontFamily: "'horizon', serif",
+                        lineHeight: 1.6,
+                    }}>
+                       <i><b>Born 15 year ago</b> (HE/HIM)</i>
+                    </p>
                 </div>
-                </div>  
             </div>
             {latest_post &&
             (
-                <div style=
+                <div className="blog-card" style=
                 {{
                     border: "3px solid #666666",
                     borderRadius: "5px",
@@ -180,9 +170,9 @@ export default function Projects()
                         fontFamily: "'Ribeye Marrow', serif",
                         marginBottom: 10,
                     }}>
-                        Latest blog post
+                        Latest post:
                     </p>
-                    <div style={{ display: "flex", gap: 1, alignItems: "flex-start" }}>
+                    <div className="blog-card-body" style={{ display: "flex", gap: 1, alignItems: "flex-start" }}>
                     <div style={{ flex: 1, minWidth: 0 }}>
                     <h2 style=
                     {{
@@ -230,13 +220,13 @@ export default function Projects()
                             fontFamily: "'Ribeye Marrow', serif",
                             cursor: "pointer",
                         }}>
-                        ↪ all blogs
+                        ↪ all posts
                     </button>
                 </div>
                 <img
                     src={latest_post.gif}
                     alt=""
-                    className="press-btn"
+                    className="press-btn blog-card-gif"
                     onMouseEnter={play_hover_sound}
                     style=
                     {{
@@ -252,76 +242,7 @@ export default function Projects()
                 </div>
             )}
 
-            <div style=
-            {{
-                border: "3px solid #666666",
-                borderRadius: "5px",
-                padding: "16px 24px",
-                maxWidth: 960,
-                width: "100%",
-                marginTop: 24,
-                marginBottom: 24,
-                backgroundColor: "#e4e4dae5",
-            }}>
-                <p style=
-                {{
-                    color: "#000000",
-                    fontSize: 26,
-                    letterSpacing: 2,
-                    fontFamily: "'Ribeye Marrow', serif",
-                    marginBottom: 14,
-                }}>
-                    My commit history
-                </p>
-                <img
-                    src="https://ghchart.rshah.org/siddharthan-pradeep07"
-                    alt="GitHub contributions"
-                    style=
-                    {{
-                        width: "100%",
-                        borderRadius: 4,
-                        display: "block",
-                    }}
-                />
-                <div style=
-                {{
-                    display: "flex",
-                    alignItems: "center",
-                    gap: 8,
-                    marginTop: 12,
-                    justifyContent: "flex-end",
-                }}>
-                    <p style=
-                    {{
-                        color: "rgb(0, 0, 0)",
-                        fontSize: 17,
-                        fontFamily: "'horizon', serif",
-                        letterSpacing: 1,
-                    }}>
-                        Less
-                    </p>
-                    {["#c6e48b", "#7bc96f", "#239a3b", "#195f26"].map((color, i) => (
-                        <div key={i} style=
-                        {{
-                            width: 14,
-                            height: 14,
-                            backgroundColor: color,
-                            border: "1px solid rgba(255, 255, 255, 0)",
-                        }} 
-                        />
-                    ))}
-                    <p style=
-                    {{
-                        color: "rgb(0, 0, 0)",
-                        fontSize: 17,
-                        fontFamily: "'horizon', serif",
-                        letterSpacing: 1,
-                    }}>
-                        More
-                    </p>
-                </div>
-            </div>
-            <div style=
+            <div className="page-heading" style=
             {{
                 backgroundColor: "rgba(63, 53, 34, 0.95)",
                 border: "5px inset rgb(100, 91, 70)",
@@ -330,6 +251,7 @@ export default function Projects()
                 display: "inline-flex",
                 alignItems: "center",
                 justifyContent: "center",
+                marginTop: 24,
                 marginBottom: 25,
             }}>
             <h1 style=
@@ -344,17 +266,17 @@ export default function Projects()
                 Here's my top projects
             </h1>
             </div>
-            <div style=
+            <div className="project-grid" style=
             {{
                 display: "grid",
                 gridTemplateColumns: "repeat(3, 1fr)",
                 gap: "20px",
                 maxWidth: 960,
                 width: "90%",
-                marginBottom: 320,
+                marginBottom: 60,
             }}>
                 {projects.map((project, index) => (
-                    <div className="press-btn flip-card-front" key={index} style=
+                    <div className="press-btn" key={index} style=
                     {{
                         backgroundColor: "rgba(255, 240, 211, 0.95)",
                         border: "5px inset rgb(141, 141, 141)",
