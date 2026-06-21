@@ -241,6 +241,75 @@ export default function Projects()
                 </div>
                 </div>
             )}
+            <div className="commit-card" style=
+            {{
+                border: "3px solid #666666",
+                borderRadius: "5px",
+                padding: "16px 24px",
+                maxWidth: 960,
+                width: "100%",
+                marginTop: 24,
+                marginBottom: 24,
+                backgroundColor: "#e4e4dae5",
+            }}>
+                <p style=
+                {{
+                    color: "#000000",
+                    fontSize: 26,
+                    letterSpacing: 2,
+                    fontFamily: "'Ribeye Marrow', serif",
+                    marginBottom: 14,
+                }}>
+                    My commit history
+                </p>
+                <img
+                    src="https://ghchart.rshah.org/siddharthan-pradeep07"
+                    alt="GitHub contributions"
+                    style=
+                    {{
+                        width: "100%",
+                        borderRadius: 4,
+                        display: "block",
+                    }}
+                />
+                <div style=
+                {{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: 8,
+                    marginTop: 12,
+                    justifyContent: "flex-end",
+                }}>
+                    <p style=
+                    {{
+                        color: "rgb(0, 0, 0)",
+                        fontSize: 17,
+                        fontFamily: "'horizon', serif",
+                        letterSpacing: 1,
+                    }}>
+                        Less
+                    </p>
+                    {["#c6e48b", "#7bc96f", "#239a3b", "#195f26"].map((color, i) => (
+                        <div key={i} style=
+                        {{
+                            width: 14,
+                            height: 14,
+                            backgroundColor: color,
+                            border: "1px solid rgba(255, 255, 255, 0)",
+                        }} 
+                        />
+                    ))}
+                    <p style=
+                    {{
+                        color: "rgb(0, 0, 0)",
+                        fontSize: 17,
+                        fontFamily: "'horizon', serif",
+                        letterSpacing: 1,
+                    }}>
+                        More
+                    </p>
+                </div>
+            </div>
 
             <div className="page-heading" style=
             {{
