@@ -43,26 +43,6 @@ Clicking "play" on Femto's project card will direct the user to (siddharthan.com
 
 ---
 
-## Clone it
-
-Clone the repo and install dependencies:
-
-```bash
-git clone https://github.com/siddharthan-pradeep07/personal-website-redesign.git
-cd personal-website-redesign
-npm install
-```
-
-Start the dev server:
-
-```bash
-npm run dev
-```
-
-Open `http://localhost:5173/` in your browser. The dev server hot-reloads on save.
-
----
-
 ## Quick files
 
 - src/app.jsx     --- (siddharthan.com/app)

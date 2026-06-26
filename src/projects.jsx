@@ -28,7 +28,7 @@ export default function Projects()
     [
         {
             name: "Amazer",
-            description: "A micro mouse analizing tool",
+            description: "Build, solve & simulate mazes. Visualise DFS, and wall-following algorithms, generate mazes, edit and find solutions.",
             date: "APR 2026",
             image: amazerImg,
             liveLink: "https://siddharthan-pradeep07.github.io/Amazer/src/pages/home.html",
@@ -52,7 +52,7 @@ export default function Projects()
         },
         {
             name: "Femto",
-            description: "A javascript platforer game based on a hen",
+            description: "A javascript platforer game based on a hen, collect coins & avoid enemies. made for the sprig console (sprig.hackclub.com)",
             date: "JUL 2025",
             image: FemtoImg,
             playLink: "/femto",
@@ -60,7 +60,7 @@ export default function Projects()
         },
         {
             name: "Printly 3D",
-            description: "3D printing website, for everyone: just upload a 3D model and I'll print it and deliver it to you.",
+            description: "3D printing website, for everyone: just upload a 3D model and I'll print it and deliver it to you. (redesign of socxly.me/p3d)",
             date: "MAR 2024",
             image: printlyImg,
             codeLink: "https://github.com/siddharthan-pradeep07/Printly-3D",
@@ -136,7 +136,7 @@ export default function Projects()
                         lineHeight: 1.6,
                         marginBottom: 10,
                     }}>
-                       <i><b>Born 15 year ago</b> (HE/HIM)</i>
+                       <i><b>Born 15 years ago</b> (HE/HIM)</i>
                     </p>
                     {/* INTRO CARD - ICONS */}
                     <div className="intro-socials" style=
@@ -147,9 +147,6 @@ export default function Projects()
                     }}>
                         <a href="https://github.com/siddharthan-pradeep07" target="_blank" onMouseEnter={play_hover_sound} rel="noreferrer" className="press-btn"style={{ color: "#3b3628" }}>
                             <FaGithub size={40} />
-                        </a>
-                        <a href="https://www.linkedin.com/in/siddharthan-pradeep-0202342a5/" target="_blank" onMouseEnter={play_hover_sound} className="press-btn" rel="noreferrer" style={{ color: "#3b3628" }}>
-                            <FaLinkedin size={40} />
                         </a>
                         <a href="https://youtube.com/@siddharthan.pradeep" target="_blank" rel="noreferrer" onMouseEnter={play_hover_sound} className="press-btn" style={{ color: "#3b3628" }}>
                             <FaYoutube size={40} />

@@ -1,0 +1,1 @@
+Studying for tests :sob: started working on strandbeest simulator, 4th claude account got banned yesterday, Became the monitor of the class (yayay) Starting to have FOMO on beest.hackclub.com but I am unstoppable! 
