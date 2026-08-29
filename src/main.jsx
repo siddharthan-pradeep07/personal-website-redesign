@@ -7,6 +7,7 @@ import Projects from './projects.jsx'
 import Cursor from './cursor.jsx'
 import Blog from './Blog.jsx'
 import Femto from './Femto.jsx'
+import Roles from "./roles.jsx";
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -17,6 +18,7 @@ createRoot(document.getElementById('root')).render(
         <Route path="/app" element={<App />} />
         <Route path="/" element={<Projects />} />
         <Route path="/femto" element={<Femto />} />
+        <Route path="/roles" element={<Roles />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>
