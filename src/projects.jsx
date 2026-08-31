@@ -11,6 +11,8 @@ import FemtoImg from "./assets/img/femto_game_thumbnail.png";
 import ppImg from "./assets/img/plasma_photo.jpg";
 import printlyImg from "./assets/img/printly_home2.png";
 import MicroImg from "./assets/img/micro_mouse.jpeg";
+import wild from "./assets/img/wild.png";
+import strandbeest from "./assets/img/strandbeest_2.png"
 //PFP ON INTRO CARD
 import pfpImg from "./assets/img/pfp.jpeg";
 // OTHER (MARKDOWN RENDER, POSTS, SOUND EFFECT)
@@ -74,6 +76,22 @@ export default function Projects()
             codeLink: "https://this-is-a-private-project.com",
             liveLink: "https://youtube.com/shorts/P9D8oNlkbqY",
         },
+        {
+            name: "Strandbeest simulator",
+            description: "Simulate Theo jansen's strandbeests (beach animals) with various tools.",
+            date: "JUN 2026",
+            image: strandbeest,
+            codeLink: "https://github.com/siddharthan-pradeep07/Strandbeest-simulator",
+            liveLink: "https://strandbeest-simulator.siddharthan.com"
+        },
+        {
+            name: "WILD (ysws)",
+            description: "A ysws site made for hackclub, with airtable as database. It also has Hack Club Oauth, with admin/reviewer perms",
+            date: "JUL 2026",
+            image: wild,
+            codeLink: "https://github.com/siddharthan-pradeep07/wild-ysws",
+            liveLink: "https://wild-ysws.vercel.app"
+        },
     ];
 
     return (
@@ -136,7 +154,7 @@ export default function Projects()
                         lineHeight: 1.6,
                         marginBottom: 10,
                     }}>
-                       <i><b>Born 15 years ago</b> (HE/HIM)</i>
+                       <i><b>Born some/lot years ago</b> (HE/HIM)</i>
                     </p>
                     {/* INTRO CARD - ICONS */}
                     <div className="intro-socials" style=
@@ -146,13 +164,16 @@ export default function Projects()
                         marginBottom: 10,
                     }}>
                         <a href="https://github.com/siddharthan-pradeep07" target="_blank" onMouseEnter={play_hover_sound} rel="noreferrer" className="press-btn"style={{ color: "#3b3628" }}>
-                            <FaGithub size={40} />
+                            <FaGithub size={45} />
+                        </a>
+                        <a href="https://www.linkedin.com/in/siddharthan-pradeep-0202342a5" onMouseEnter={play_hover_sound} className="press-btn" style={{color:"#3b3628"}}>
+                            <FaLinkedin size={45} />
                         </a>
                         <a href="https://youtube.com/@siddharthan.pradeep" target="_blank" rel="noreferrer" onMouseEnter={play_hover_sound} className="press-btn" style={{ color: "#3b3628" }}>
-                            <FaYoutube size={40} />
+                            <FaYoutube size={45} />
                         </a>
                         <a href="mailto:siddharthansp07@gmail.com" onMouseEnter={play_hover_sound} className="press-btn" style={{ color: "#3b3628" }}>
-                            <MdEmail size={40} />
+                            <MdEmail size={45} />
                         </a>
                     </div>
                 </div>
