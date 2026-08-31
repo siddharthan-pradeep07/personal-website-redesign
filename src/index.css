@@ -143,6 +143,26 @@ code {
     transform: scale(0.9);
 }
 
+.view-all-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.view-all-btn .arrow {
+    display: inline-block;
+    color: rgb(255, 233, 182);
+    transition: transform 0.25s ease;
+}
+
+.view-all-btn:hover .arrow-left {
+    transform: translateX(-8px);
+}
+
+.view-all-btn:hover .arrow-right {
+    transform: translateX(8px);
+}
+
 .flip-card-container
 {
     perspective: 1500px;

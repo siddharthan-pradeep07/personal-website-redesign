@@ -60,14 +60,14 @@ export default function Projects()
             playLink: "/femto",
             codeLink: "https://github.com/hackclub/sprig/pull/3172",
         },
-        {
-            name: "Printly 3D",
-            description: "3D printing website, for everyone: just upload a 3D model and I'll print it and deliver it to you. (redesign of socxly.me/p3d)",
-            date: "MAR 2024",
-            image: printlyImg,
-            codeLink: "https://github.com/siddharthan-pradeep07/Printly-3D",
-            liveLink: "https://siddharthan-pradeep07.github.io/Printly-3D",
-        },
+        // {
+        //     name: "Printly 3D",
+        //     description: "3D printing website, for everyone: just upload a 3D model and I'll print it and deliver it to you. (redesign of socxly.me/p3d)",
+        //     date: "MAR 2024",
+        //     image: printlyImg,
+        //     codeLink: "https://github.com/siddharthan-pradeep07/Printly-3D",
+        //     liveLink: "https://siddharthan-pradeep07.github.io/Printly-3D",
+        // },
         {
             name: "Micro Mouse V2",
             description: "Maze solving robot v2 made with esp32, TB6612FNG and N20 motors with an array of 4 ultrasonic sensors.",
@@ -76,14 +76,14 @@ export default function Projects()
             codeLink: "https://this-is-a-private-project.com",
             liveLink: "https://youtube.com/shorts/P9D8oNlkbqY",
         },
-        {
-            name: "Strandbeest simulator",
-            description: "Simulate Theo jansen's strandbeests (beach animals) with various tools.",
-            date: "JUN 2026",
-            image: strandbeest,
-            codeLink: "https://github.com/siddharthan-pradeep07/Strandbeest-simulator",
-            liveLink: "https://strandbeest-simulator.siddharthan.com"
-        },
+        // {
+        //     name: "Strandbeest simulator",
+        //     description: "Simulate Theo jansen's strandbeests (beach animals) with various tools.",
+        //     date: "JUN 2026",
+        //     image: strandbeest,
+        //     codeLink: "https://github.com/siddharthan-pradeep07/Strandbeest-simulator",
+        //     liveLink: "https://strandbeest-simulator.siddharthan.com"
+        // },
         {
             name: "WILD (ysws)",
             description: "A ysws site made for hackclub, with airtable as database. It also has Hack Club Oauth, with admin/reviewer perms",
@@ -537,6 +537,28 @@ export default function Projects()
                     </div>
                 ))}
             </div>
+            {/* VIEW ALL PROJECTS BUTTON, LINKED TO /all-projects */}
+            <button
+                onClick={() => navigate('/all-projects')}
+                className="press-btn view-all-btn"
+                onMouseEnter={play_hover_sound}
+                style=
+                {{
+                    backgroundColor: "rgba(63, 53, 34, 0.95)",
+                    border: "5px inset rgb(100, 91, 70)",
+                    borderRadius: 1,
+                    padding: "14px 28px",
+                    color: "rgb(255, 255, 221)",
+                    fontSize: 20,
+                    letterSpacing: 3,
+                    fontFamily: "'Ribeye Marrow', serif",
+                    cursor: "pointer",
+                    marginBottom: 60,
+                }}>
+                <span className="arrow arrow-left">&lt;&lt;</span>
+                view all projects
+                <span className="arrow arrow-right">&gt;&gt;</span>
+            </button>
         </div>
     );
 }
