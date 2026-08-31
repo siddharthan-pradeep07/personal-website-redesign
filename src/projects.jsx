@@ -1,5 +1,5 @@
 // SOCIAL LINKS (ICONS)
-import { FaGithub, FaLinkedin, FaYoutube } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaYoutube, FaAndroid, FaAddressCard, FaAirbnb, FaAmazon, FaApple, FaBed } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 // BACKGROUND
 import bgImage from "./assets/img/bg_15.jpg";
@@ -585,7 +585,7 @@ export default function Projects()
                 <p style=
                 {{
                     color: "#000",
-                    fontSize: 12,
+                    fontSize: 15,
                     letterSpacing: 2,
                     fontFamily: "-apple-system",
                     marginBottom: 14,
