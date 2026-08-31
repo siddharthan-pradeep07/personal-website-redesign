@@ -13,6 +13,7 @@ import printlyImg from "./assets/img/printly_home2.png";
 import MicroImg from "./assets/img/micro_mouse.jpeg";
 import wild from "./assets/img/wild.png";
 import strandbeest from "./assets/img/strandbeest_2.png"
+import arcana from "./assets/img/IMG_2796.jpg"
 //PFP ON INTRO CARD
 import pfpImg from "./assets/img/pfp.jpeg";
 // OTHER (MARKDOWN RENDER, POSTS, SOUND EFFECT)
@@ -559,6 +560,53 @@ export default function Projects()
                 view all projects
                 <span className="arrow arrow-right">&gt;&gt;</span>
             </button>
-        </div>
+            <div className="blog-card" style=
+            {{
+                border: "3px solid #666666",
+                borderRadius: "5px",
+                padding: "16px 24px",
+                maxWidth: 960,
+                width: "100%",
+                marginTop: 24,
+                marginBottom: 24,
+                backgroundColor: "#f1f1c3e5",
+            }}>
+                <div style={{ flex: 1, minWidth: 0 }}>
+                <p style=
+                {{
+                    color: "#000000",
+                    fontSize: 26,
+                    letterSpacing: 2,
+                    fontFamily: "'Ribeye Marrow', serif",
+                    marginBottom: 14,
+                }}>
+                    Participated in a hackathon @ singapore and came 2nd.
+                </p>
+                <p style=
+                {{
+                    color: "#000",
+                    fontSize: 12,
+                    letterSpacing: 2,
+                    fontFamily: "-apple-system",
+                    marginBottom: 14,
+                }}>
+                    I participated on an International hackathon conducted by Hack Club "Horizons Arcana" in Singapore and came 2nd, It was an amazing experience and I really loved the city. (My flights were sponsored by Hack Club)
+                </p>
+                </div>
+                <img
+                    src={arcana}
+                    alt="horizons arcana singapore" 
+                    className="blog-card-gif"
+                    style=
+                        {{
+                            width: 240,
+                            height: 150,
+                            objectFit: "cover",
+                            borderRadius: 4,
+                            border: "3px solid #4d4e4c",
+                            flexShrink: 1,
+                        }}/>
+            </div>
+        </div>  
     );
 }
