@@ -9,13 +9,13 @@ export default function Quotes()
     const quotes =
     [
         {
-            quote: "tesiovubsdv",
-            date: "368248",
+            quote: "Use AI as a tool to express your creativity, not as creativity itself",
+            date: "july 2026",
             by: "siddharthan",
         },
         {
-            quote: "yiuowteru",
-            date: "oigvhsdvb",
+            quote: "Defenition: A robot is a machine that performs physical tasks automatically or with minimal human input accordingly to the environment.",
+            date: "february 2026",
             by: "siddharthan",
         },
     ];
@@ -49,17 +49,28 @@ export default function Quotes()
                     maxWidth: 960,
                     width: "100%"
                 }}>
-                    <h2 style=
-                        {{
-                            color: "#000000",
-                            fontSize: 19,
-                            letterSpacing: 3,
-                            marginBottom: 10,
-                            fontFamily: "'Ribeye Marrow', serif",
-                            borderBottom: "3px solid rgba(111, 140, 102, 0.3)",
-                        }}>
-                        {quote.date}
-                    </h2>
+                    <div style={{ flex: 1, minWidth: 0 }}>
+                        <h2 style=
+                            {{
+                                color: "#000000",
+                                fontSize: 19,
+                                letterSpacing: 1,
+                                marginBottom: 10,
+                                fontFamily: "'Ribeye Marrow', serif",
+                                borderBottom: "3px solid rgba(111, 140, 102, 0.3)",
+                            }}>
+                            "{quote.quote}"
+                        </h2>
+                        <p style=
+                            {{
+                                color: "#555555",
+                                fontSize: 13,
+                                letterSpacing: 2,
+                                fontFamily: "'horizon', serif",
+                            }}>
+                            — {quote.by}, {quote.date}
+                        </p>
+                    </div>
                 </div>
             ))}
         </div>

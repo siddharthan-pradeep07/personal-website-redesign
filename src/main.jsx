@@ -9,7 +9,7 @@ import Blog from './Blog.jsx'
 import Femto from './Femto.jsx'
 import Roles from "./roles.jsx";
 import Allprojects from "./allprojects.jsx";
-import quotes from "./quotes.jsx";
+import Quotes from "./quotes.jsx";
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -22,7 +22,7 @@ createRoot(document.getElementById('root')).render(
         <Route path="/femto" element={<Femto />} />
         <Route path="/roles" element={<Roles />} />
         <Route path="/all-projects" element={<Allprojects />} />
-        <Route path="/quotes.jsx" element={<quotes />} />
+        <Route path="/quotes" element={<Quotes />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>
