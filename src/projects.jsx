@@ -155,7 +155,7 @@ export default function Projects()
                         lineHeight: 1.6,
                         marginBottom: 10,
                     }}>
-                       <i><b>Born some/lot years ago</b> (HE/HIM)</i>
+                       <i><b>Born 15 years ago</b> (HE/HIM)</i>
                     </p>
                     {/* INTRO CARD - ICONS */}
                     <div className="intro-socials" style=
@@ -345,6 +345,52 @@ export default function Projects()
                         More
                     </p>
                 </div>
+            </div>
+
+            {/* QUOTES CARD - LINKED TO /QUOTES */}
+            <div className="blog-card" style=
+            {{
+                border: "3px solid #666666",
+                borderRadius: "5px",
+                padding: "16px 24px",
+                maxWidth: 960,
+                width: "100%",
+                marginBottom: 24,
+                backgroundColor: "#e4e4dae5",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "space-between",
+                gap: 20,
+            }}>
+                <p style=
+                {{
+                    color: "#000000",
+                    fontSize: 20,
+                    letterSpacing: 2,
+                    fontFamily: "'Ribeye Marrow', serif",
+                    margin: 0,
+                }}>
+                    I wrote some quotes and definitions, chech it out!
+                </p>
+                {/* BUTTON - LINKED TO /QUOTES */}
+                <button
+                    onClick={() => navigate('/quotes')}
+                    className="press-btn"
+                    onMouseEnter={play_hover_sound}
+                    style=
+                    {{
+                        padding: "8px 20px",
+                        backgroundColor: "#3f3e2c",
+                        border: "4px inset rgb(94, 90, 68)",
+                        color: "#ffffff",
+                        fontSize: 14,
+                        letterSpacing: 2,
+                        fontFamily: "'Ribeye Marrow', serif",
+                        cursor: "pointer",
+                        whiteSpace: "nowrap",
+                    }}>
+                    ↪ view quotes
+                </button>
             </div>
 
             <div className="page-heading" style=

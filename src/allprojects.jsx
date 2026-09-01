@@ -82,7 +82,10 @@ export default function Projects()
             codeLink: "https://github.com/siddharthan-pradeep07/wild-ysws",
             liveLink: "https://wild-ysws.vercel.app"
         },
-        {},{},{},{},{},{},{},{},{},{},{},{},{},{},
+        {
+            name: "WILD (ysws)",
+            description
+        },
     ];
 
     return (
