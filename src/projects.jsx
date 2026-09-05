@@ -96,19 +96,10 @@ export default function Projects()
     ];
 
     return (
-        <div style=
+        <div className="page-shell" style=
         {{
-            minHeight: "100vh",
-            width: "100vw",
-            backgroundImage: `url(${bgImage})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
+            '--page-bg': `url(${bgImage})`,
             justifyContent: "center",
-            fontFamily: "'Ribeye Marrow', serif",
-            padding: "60px 40px",
         }}>
             {/* INTRO CARD */}
             <div className="intro-card" style=
@@ -117,7 +108,7 @@ export default function Projects()
                 alignItems: "center",
                 borderRadius: "8px",
                 gap: 20,
-                marginBottm: 40,
+                marginBottom: 40,
                 backgroundColor: "#fff0c8ec",
                 border: "3px solid #666666",
                 padding: "16px 24px",
@@ -128,8 +119,8 @@ export default function Projects()
                 <img src = {pfpImg} className="press-btn" onMouseEnter={play_hover_sound} alt="huh, try refreshing to see me"
                   style=
                   {{
-                    width:150,
-                    height:150,
+                    width: "clamp(90px, 24vw, 150px)",
+                    height: "clamp(90px, 24vw, 150px)",
                     borderRadius: "10%",
                     objectFit: "cover",
                     flexShrink: 0,
@@ -140,7 +131,7 @@ export default function Projects()
                 <div className="intro-text">
                     <p style={{
                         color: "#000000",
-                        fontSize: 26,
+                        fontSize: "clamp(18px, 4.5vw, 26px)",
                         letterSpacing: 1,
                         fontFamily: "'Ribeye Marrow', serif",
                         lineHeight: 1.6,
@@ -205,7 +196,7 @@ export default function Projects()
                     }}>
                         Latest post:
                     </p>
-                    <div className="blog-card-body" style={{ display: "flex", gap: 1, alignItems: "flex-start" }}>
+                    <div className="blog-card-body" style={{ display: "flex", gap: 20, alignItems: "flex-start" }}>
                     <div style={{ flex: 1, minWidth: 0 }}>
                     <h2 style=
                     {{
@@ -348,7 +339,7 @@ export default function Projects()
             </div>
 
             {/* QUOTES CARD - LINKED TO /QUOTES */}
-            <div className="blog-card" style=
+            <div className="blog-card blog-card-body" style=
             {{
                 border: "3px solid #666666",
                 borderRadius: "5px",
@@ -369,6 +360,7 @@ export default function Projects()
                     letterSpacing: 2,
                     fontFamily: "'Ribeye Marrow', serif",
                     margin: 0,
+                    minWidth: 0,
                 }}>
                     I wrote some quotes and definitions, chech it out!
                 </p>
@@ -617,6 +609,7 @@ export default function Projects()
                 marginBottom: 24,
                 backgroundColor: "#f1f1c3e5",
             }}>
+                <div className="blog-card-body" style={{ display: "flex", gap: 20, alignItems: "flex-start" }}>
                 <div style={{ flex: 1, minWidth: 0 }}>
                 <p style=
                 {{
@@ -641,7 +634,7 @@ export default function Projects()
                 </div>
                 <img
                     src={arcana}
-                    alt="horizons arcana singapore" 
+                    alt="horizons arcana singapore"
                     className="blog-card-gif"
                     style=
                         {{
@@ -650,8 +643,9 @@ export default function Projects()
                             objectFit: "cover",
                             borderRadius: 4,
                             border: "3px solid #4d4e4c",
-                            flexShrink: 1,
+                            flexShrink: 0,
                         }}/>
+                </div>
             </div>
         </div>  
     );

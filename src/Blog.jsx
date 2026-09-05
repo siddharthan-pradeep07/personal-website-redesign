@@ -20,24 +20,17 @@ export default function Blog()
     }
 
     return (
-        <div style=
+        <div className="page-shell page-shell--roomy-top" style=
         {{
-            minHeight: "100vh",
-            width: "100vw",
-            backgroundImage: `url(${bgImage})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            fontFamily: "'Ribeye Marrow', serif",
-            padding: "100px 40px",
+            '--page-bg': `url(${bgImage})`,
         }}>
             <div style=
             {{
                 display: "flex",
+                flexWrap: "wrap",
                 alignItems: "center",
                 justifyContent: "space-between",
+                gap: 16,
                 maxWidth: 960,
                 width: "100%",
                 marginBottom: 30,
@@ -45,7 +38,7 @@ export default function Blog()
                 <h1 style=
                 {{
                     color: "#ffffff",
-                    fontSize: 44,
+                    fontSize: "clamp(28px, 5vw, 44px)",
                     letterSpacing: 4,
                     fontFamily: "'Ribeye Marrow', serif",
                 }}>
@@ -85,7 +78,7 @@ export default function Blog()
 
                             {/* INVISIBLE SIZER */}
                             <div className="flip-card-sizer">
-                                <div style={{ display: "flex", gap: 20, alignItems: "flex-start" }}>
+                                <div className="blog-card-body" style={{ display: "flex", gap: 20, alignItems: "flex-start" }}>
                                     <div style={{ flex: 1, minWidth: 0 }}>
                                         <h2 style=
                                         {{
@@ -123,6 +116,7 @@ export default function Blog()
                                         <img
                                             src={post.gif}
                                             alt=""
+                                            className="blog-card-gif"
                                             style=
                                             {{
                                                 width: 200,
@@ -148,7 +142,7 @@ export default function Blog()
                                 boxSizing: "border-box",
                                 overflow: "hidden",
                             }}>
-                                <div style={{ display: "flex", gap: 20, alignItems: "flex-start" }}>
+                                <div className="blog-card-body" style={{ display: "flex", gap: 20, alignItems: "flex-start" }}>
                                     <div style={{ flex: 1, minWidth: 0 }}>
                                         <h2 style=
                                         {{
@@ -187,6 +181,7 @@ export default function Blog()
                                         <img
                                             src={post.gif}
                                             alt=""
+                                            className="blog-card-gif"
                                             style=
                                             {{
                                                 width: 200,

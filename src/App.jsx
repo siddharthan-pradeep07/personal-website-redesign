@@ -8,21 +8,14 @@ export default function App()
   const navigate = useNavigate();
 
   return (
-    <div style={{
-      minHeight: "100vh",
-      width: "100vw",
-      backgroundImage: `url(${bgImage})`,
-      backgroundSize: "cover",
-      backgroundPosition: "center",
-      display: "flex",
-      flexDirection: "column",
-      alignItems: "center",
+    <div className="page-shell" style={{
+      '--page-bg': `url(${bgImage})`,
       justifyContent: "center",
     }}>
       <h1 style={{
         fontFamily: "'Cinzel', serif",
         color: "#ffffff",
-        fontSize: 48,
+        fontSize: "clamp(28px, 6vw, 48px)",
         letterSpacing: 6,
         marginBottom: 24,
         textAlign: "center",
@@ -33,7 +26,7 @@ export default function App()
         onClick={() => navigate('/')}
         style={{
           position: "relative",
-          width: 660,
+          width: "min(660px, 90vw)",
           cursor: "pointer",
         }}>
         <video

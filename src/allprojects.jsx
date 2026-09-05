@@ -86,26 +86,18 @@ export default function Projects()
 
     return (
 
-            <div style=
+            <div className="page-shell" style=
                 {{
-                    minHeight: "100vh",
-                    width: "100vw",
-                    backgroundImage: `url(${bgImage})`,
-                    backgroundSize: "cover",
-                    backgroundPosition: "center",
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    fontFamily: "'Ribeye Marrow', serif",
-                    padding: "60px 40px",
+                    '--page-bg': `url(${bgImage})`,
                 }}>
 
             <div style=
             {{
                 display: "flex",
+                flexWrap: "wrap",
                 alignItems: "center",
                 justifyContent: "space-between",
+                gap: 16,
                 maxWidth: 960,
                 width: "100%",
                 marginBottom: 30,
@@ -113,7 +105,7 @@ export default function Projects()
                 <h1 style=
                 {{
                     color: "#ffffff",
-                    fontSize: 44,
+                    fontSize: "clamp(28px, 5vw, 44px)",
                     letterSpacing: 4,
                     fontFamily: "'Ribeye Marrow', serif",
                 }}>

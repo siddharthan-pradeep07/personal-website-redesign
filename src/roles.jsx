@@ -21,17 +21,10 @@ export default function Roles()
     ];
 
     return (
-        <div style =
+        <div className="page-shell" style =
         {{
-            // minHeight: "100vh",
-            // width: "100vh",
             backgroundColor: "#ffffff",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
             justifyContent: "center",
-            fontFamily: "'Ribeye Marrow', serif",
-            padding: "60px 40px",
         }}>
            {/* <button
               onClick={() => navigate(-1)}

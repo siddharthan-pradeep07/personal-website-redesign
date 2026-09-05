@@ -3,8 +3,10 @@ import post1 from "./posts/test.md?raw";
 import post2 from "./posts/crabby_1.md?raw";
 import post3 from "./posts/general.md?raw";
 import post4 from "./posts/general2.md?raw";
+import post5 from "./posts/general3.md?raw";
 
 // GIFS
+import gif11 from "./assets/videos/ex_11.gif";
 import gif10 from "./assets/videos/ex_10.gif";
 import gif9 from "./assets/videos/ex_9.gif";
 import gif8 from "./assets/videos/ex_8.gif";
@@ -33,9 +35,22 @@ import p3_i4 from "./assets/img/crabby/image_4.jpeg";
 import p4_i1 from "./assets/img/claude.png";
 import p4_i2 from "./assets/img/strandbeest_2.png";
 import p4_i3 from "./assets/img/strandbeest.jpg";
+//POST 5
+import p5_i1 from "./assets/img/fallout.png";
+import p5_i2 from "./assets/img/heartbeats.png";
+import p5_i3 from "./assets/img/IMG_2796.jpg";
+import p5_i4 from "./assets/img/simon_cone.png";
 
 
 const posts = [
+    {
+        slug: "fifth-post",
+        title: "Life Update",
+        date: "3/9/2026",
+        content: post5,
+        gif: gif11,
+        images: [p5_i2, p5_i3, p5_i4],
+    },
     {
         slug: "forth-post",
         title: "OOO till 2/7",

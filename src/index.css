@@ -59,13 +59,63 @@
   }
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   margin: 0;
+  overflow-x: hidden;
 }
 
 #root {
   width: 100%;
   min-height: 100vh;
+}
+
+/* ------------------------------------------------------------------ */
+/* SHARED FULL-PAGE SHELL (background image + centered content column) */
+/* used by App.jsx, projects.jsx, allprojects.jsx, Blog.jsx, quotes.jsx, roles.jsx */
+/* ------------------------------------------------------------------ */
+.page-shell {
+  position: relative;
+  isolation: isolate;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 40px;
+  font-family: 'Ribeye Marrow', serif;
+}
+
+/* Background sits on a viewport-fixed layer so background-size:cover is
+   measured against the screen, not the (often much taller) page content -
+   otherwise long pages stretch/zoom the image far past what it should be. */
+.page-shell::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background-image: var(--page-bg, none);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.page-shell--roomy-top {
+  padding-top: 100px;
+}
+
+@media (max-width: 700px) {
+  .page-shell {
+    padding: 32px 16px;
+  }
+
+  .page-shell--roomy-top {
+    padding-top: 48px;
+  }
 }
 
 h1,

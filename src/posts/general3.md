@@ -1,0 +1,12 @@
+I have a lot to put in here; here are the important things.
+- I went to horizons arcana a hackathon organized by Hack Club, it was really cool.
+- I somehow became a reviewer at macondo but got removed due to inactivity :sob:
+- wild-ysws.vercel.app (ysws website) is slowing taking shape, however I am lately not coding on it.
+- Made a Hackatime heartbeats analizing tool, Planning on giving Printly 3D redesing and gonna make it proper after so many years, this is a work in progress since 7th grade, now I'm in 10th.
+- I def need to learn KiCAD and Onshape uhh... Properly!!
+- won some sciene expos and a math expo, (math one was really cool)
+- shipped wild-ysws to beest, and I have a lot of things in my mind + jorted down on notepad to buy from hardware grant, planning on buying a nike shoe (revelution 8) if I get a golden ticket and am able to purcahse a golden ticket.
+- added new elements to this website and shipped it to horizons to clear my debt.
+- I see a lot of cool ysws, but am unsure on which one to participate.
+- Also my AI use has incresed a lot after purchasing claude pro, which I am kinda concerned so not gonna a buy a month of it, What if I buy claude pro on monthly intervels?? will think about it, But that just cuts all discounts and increases the taxes.
+- today: It was a pretty amazing day not to mention my 4 goal misses on the last period (PE) We sang songs in advance to the teachers day. 

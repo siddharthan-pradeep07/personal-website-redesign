@@ -21,19 +21,10 @@ export default function Quotes()
     ];
 
     return (
-        <div style=
+        <div className="page-shell" style=
         {{
-            minHeight: "100vh",
-            width: "100vw",
-            backgroundImage: `url(${bgImage})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
+            '--page-bg': `url(${bgImage})`,
             justifyContent: "center",
-            fontFamily: "'Ribeye Marrow', serif",
-            padding: "60px 40px",
         }}>
             {quotes.map((quote, index) => (
                 <div key={index} className='intro-card' style=
