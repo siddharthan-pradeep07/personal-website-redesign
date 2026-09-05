@@ -1,3 +1,4 @@
+import { useState } from "react";
 import bgImage from "./assets/img/bg_8.jpg";
 import amazerImg from "./assets/img/amazer.png";
 import bookImg from "./assets/img/book.png";
@@ -22,6 +23,7 @@ export default function Projects()
             name: "Amazer",
             description: "Build, solve & simulate mazes. Visualise DFS, and wall-following algorithms, generate mazes, edit and find solutions.",
             date: "APR 2026",
+            category: "Software",
             image: amazerImg,
             liveLink: "https://siddharthan-pradeep07.github.io/Amazer/src/pages/home.html",
             codeLink: "https://github.com/siddharthan-pradeep07/Amazer",
@@ -30,6 +32,7 @@ export default function Projects()
             name: "Inplace",
             description: "A small device with an OLED display, joystick, and Arduino Nano used for handling the basic features.",
             date: "JAN 2025",
+            category: "Hardware",
             image: inplaceImg,
             liveLink: "http://i-do-not-have-a-demo-for-this.com/",
             codeLink: "https://github.com/siddharthan-pradeep07/Inplace",
@@ -38,6 +41,7 @@ export default function Projects()
             name: "Plasma plant",
             description: "Farming rover that detects the soil, suggests seeds, sows them, and waters. Stops automatically when land is covered.",
             date: "SEP 2025",
+            category: "Robotics",
             image: ppImg,
             liveLink: "https://youtube.com/shorts/KFvk7Cw4Y6I?si=3ox_9fIEVDu8zfDL",
             codeLink: "https://github.com/siddharthan-pradeep07/Plasma_plant",
@@ -46,6 +50,7 @@ export default function Projects()
             name: "Femto",
             description: "A javascript platforer game based on a hen, collect coins & avoid enemies. made for the sprig console (sprig.hackclub.com)",
             date: "JUL 2025",
+            category: "Games",
             image: FemtoImg,
             playLink: "/femto",
             codeLink: "https://github.com/hackclub/sprig/pull/3172",
@@ -54,6 +59,7 @@ export default function Projects()
             name: "Printly 3D",
             description: "3D printing website, for everyone: just upload a 3D model and I'll print it and deliver it to you. (redesign of socxly.me/p3d)",
             date: "MAR 2024",
+            category: "Web",
             image: printlyImg,
             codeLink: "https://github.com/siddharthan-pradeep07/Printly-3D",
             liveLink: "https://siddharthan-pradeep07.github.io/Printly-3D",
@@ -62,6 +68,7 @@ export default function Projects()
             name: "Micro Mouse V2",
             description: "Maze solving robot v2 made with esp32, TB6612FNG and N20 motors with an array of 4 ultrasonic sensors.",
             date: "FEB 2026",
+            category: "Robotics",
             image: MicroImg,
             codeLink: "https://this-is-a-private-project.com",
             liveLink: "https://youtube.com/shorts/P9D8oNlkbqY",
@@ -70,6 +77,7 @@ export default function Projects()
             name: "Strandbeest simulator",
             description: "Simulate Theo jansen's strandbeests (beach animals) with various tools.",
             date: "JUN 2026",
+            category: "Software",
             image: strandbeest,
             codeLink: "https://github.com/siddharthan-pradeep07/Strandbeest-simulator",
             liveLink: "https://strandbeest-simulator.siddharthan.com"
@@ -78,17 +86,25 @@ export default function Projects()
             name: "WILD (ysws)",
             description: "A ysws site made for hackclub, with airtable as database. It also has Hack Club Oauth, with admin/reviewer perms",
             date: "JUL 2026",
+            category: "Web",
             image: wild,
             codeLink: "https://github.com/siddharthan-pradeep07/wild-ysws",
             liveLink: "https://wild-ysws.vercel.app"
         },
     ];
 
+    const [activeCategory, setActiveCategory] = useState("All");
+    const categories = ["All", ...new Set(projects.map((project) => project.category))];
+    const filteredProjects = activeCategory === "All"
+        ? projects
+        : projects.filter((project) => project.category === activeCategory);
+
     return (
 
             <div className="page-shell" style=
                 {{
                     '--page-bg': `url(${bgImage})`,
+                    '--page-bg-position': 'top',
                 }}>
 
             <div style=
@@ -131,6 +147,25 @@ export default function Projects()
                 </button>
             </div>
 
+            {/* CATEGORY FILTER TABS */}
+            <div className="filter-tabs" style=
+                {{
+                    maxWidth: 960,
+                    width: "90%",
+                    marginBottom: 30,
+                }}>
+                {categories.map((category) => (
+                    <button
+                        key={category}
+                        onClick={() => setActiveCategory(category)}
+                        onMouseEnter={play_hover_sound}
+                        className={"press-btn filter-tab" + (activeCategory === category ? " active" : "")}
+                    >
+                        {category}
+                    </button>
+                ))}
+            </div>
+
             <div className="project-grid" style=
                 {{
                     display: "grid",
@@ -140,8 +175,8 @@ export default function Projects()
                     width: "90%",
                     marginBottom: 60,
                 }}>
-                        {projects.map((project, index) => (
-                            <div className="press-btn" key={index} style=
+                        {filteredProjects.map((project) => (
+                            <div className="press-btn" key={project.name} style=
                             {{
                                 backgroundColor: "rgba(255, 240, 211, 0.95)",
                                 border: "5px inset rgb(141, 141, 141)",

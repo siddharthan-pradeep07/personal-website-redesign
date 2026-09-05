@@ -100,7 +100,7 @@ body {
   z-index: -1;
   background-image: var(--page-bg, none);
   background-size: cover;
-  background-position: center;
+  background-position: var(--page-bg-position, center);
   background-repeat: no-repeat;
 }
 
@@ -211,6 +211,34 @@ code {
 
 .view-all-btn:hover .arrow-right {
     transform: translateX(8px);
+}
+
+.filter-tabs
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.filter-tab
+{
+    padding: 8px 18px;
+    font-family: 'Ribeye Marrow', serif;
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: #ffffff;
+    background-color: rgba(87, 82, 63, 0.75);
+    border: 3px outset rgb(126, 118, 95);
+    border-radius: 2px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.filter-tab.active
+{
+    background-color: #3f3e2c;
+    border: 3px inset rgb(94, 90, 68);
 }
 
 .flip-card-container
